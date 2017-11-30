@@ -321,6 +321,10 @@ lib64/qt/plugins/printsupport/libcocoaprintersupport.dylib.dSYM/Contents/Info.pl
 lib64/qt/plugins/printsupport/libcocoaprintersupport.dylib.dSYM/Contents/Resources/DWARF/libcocoaprintersupport.dylib
 lib64/qt/plugins/sqldrivers/libqsqlite.dylib.dSYM/Contents/Info.plist
 lib64/qt/plugins/sqldrivers/libqsqlite.dylib.dSYM/Contents/Resources/DWARF/libqsqlite.dylib
+resources/Toren1BD_Decor.obj
+resources/Toren1BD_Decor_BakedLighting.png
+resources/Toren1BD_Main.obj
+resources/Toren1BD_Main_BakedLighting.png
 resources/resources.rcc
 lib/pc-bios/bios.bin
 lib/pc-bios/vgabios-cirrus.bin
