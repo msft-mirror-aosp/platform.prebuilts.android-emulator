@@ -44,6 +44,7 @@ qemu/darwin-x86_64/qemu-upstream-mipsel.dSYM/Contents/Resources/DWARF/qemu-upstr
 qemu/darwin-x86_64/qemu-upstream-x86_64.dSYM/Contents/Info.plist
 qemu/darwin-x86_64/qemu-upstream-x86_64.dSYM/Contents/Resources/DWARF/qemu-upstream-x86_64
 lib/advancedFeatures.ini
+lib/advancedFeaturesCanary.ini
 lib/ca-bundle.pem
 lib/pc-bios/bios-256k.bin
 lib/pc-bios/bios.bin
