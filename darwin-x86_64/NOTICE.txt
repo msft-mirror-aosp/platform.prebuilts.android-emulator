@@ -46,9 +46,11 @@ qemu/darwin-x86_64/qemu-upstream-x86_64.dSYM/Contents/Resources/DWARF/qemu-upstr
 lib/advancedFeatures.ini
 lib/advancedFeaturesCanary.ini
 lib/ca-bundle.pem
+lib/emu-original-feature-flags.protobuf
 lib/pc-bios/bios-256k.bin
 lib/pc-bios/bios.bin
 lib/pc-bios/efi-virtio.rom
+lib/pc-bios/keymaps/Makefile
 lib/pc-bios/keymaps/ar
 lib/pc-bios/keymaps/bepo
 lib/pc-bios/keymaps/common
@@ -331,10 +333,13 @@ resources/poster.png
 resources/resources.rcc
 lib/pc-bios/bios.bin
 lib/pc-bios/vgabios-cirrus.bin
+android-info.txt
 emulator64-arm
 emulator64-mips
 emulator64-x86
 emulator64-crash-service
+qemu-img
+code-coverage.zip
 emulator.dSYM/Contents/Info.plist
 emulator.dSYM/Contents/Resources/DWARF/emulator
 emulator-check.dSYM/Contents/Info.plist
