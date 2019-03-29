@@ -44,6 +44,14 @@ Notices for file(s):
 /emulator/resources/Toren1BD.mtl
 /emulator/resources/Toren1BD_Main.png
 /emulator/resources/Toren1BD_Decor.png
+/emulator/resources/macroPreviews/Move_to_image_room.gif
+/emulator/resources/macroPreviews/Reset_position.gif
+/emulator/resources/macroPreviews/Track_horizontal_plane.gif
+/emulator/resources/macroPreviews/Track_vertical_plane.gif
+/emulator/resources/macros/Track_horizontal_plane
+/emulator/resources/macros/Move_to_image_room
+/emulator/resources/macros/Reset_position
+/emulator/resources/macros/Track_vertical_plane
 /emulator/bin64/fsck.ext4
 /emulator/bin64/mkfs.ext4
 /emulator/bin64/tune2fs
@@ -60,6 +68,7 @@ Notices for file(s):
 /emulator/lib/emu-original-feature-flags.protobuf
 /emulator/lib/advancedFeatures.ini
 /emulator/lib/ca-bundle.pem
+/emulator/lib/pc-bios/efi-e1000.rom
 /emulator/lib/pc-bios/kvmvapic.bin
 /emulator/lib/pc-bios/multiboot.bin
 /emulator/lib/pc-bios/vgabios-stdvga.bin
@@ -69,6 +78,7 @@ Notices for file(s):
 /emulator/lib/pc-bios/linuxboot_dma.bin
 /emulator/lib/pc-bios/linuxboot.bin
 /emulator/lib/pc-bios/efi-virtio.rom
+/emulator/lib/pc-bios/efi-e1000e.rom
 /emulator/lib/pc-bios/vgabios-cirrus.bin
 /emulator/lib/pc-bios/keymaps/sl
 /emulator/lib/pc-bios/keymaps/pl
