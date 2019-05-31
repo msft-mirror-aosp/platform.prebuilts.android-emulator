@@ -143,6 +143,7 @@ Notices for file(s):
 /emulator/lib/pc-bios/keymaps/lv
 /emulator/lib/pc-bios/keymaps/common
 /emulator/lib/pc-bios/keymaps/pt-br
+/emulator/qemu/linux-x86_64/qemu-system-i386-headless
 /emulator/qemu/linux-x86_64/qemu-system-i386
 /emulator/qemu/linux-x86_64/qemu-system-x86_64-headless
 /emulator/qemu/linux-x86_64/qemu-system-x86_64
