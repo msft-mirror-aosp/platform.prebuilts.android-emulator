@@ -28,6 +28,7 @@ Notices for file(s):
 /emulator/bin64/mkfs.ext4
 /emulator/bin64/fsck.ext4
 /emulator/bin64/e2fsck
+/emulator/lib/snapshot.proto
 /emulator/lib/waterfall.proto
 /emulator/lib/emulator_controller.proto
 /emulator/lib/hardware-properties.ini
@@ -153,6 +154,7 @@ Notices for file(s):
 /emulator/lib64/qt/lib/libQt5WidgetsAndroidEmu.so.5
 /emulator/lib64/qt/lib/libQt5GuiAndroidEmu.so.5
 /emulator/lib64/qt/lib/libQt5CoreAndroidEmu.so.5
+/emulator/qemu/linux-x86_64/qemu-system-armel-headless
 /emulator/qemu/linux-x86_64/qemu-system-aarch64-headless
 /emulator/qemu/linux-x86_64/qemu-system-x86_64-headless
 /emulator/qemu/linux-x86_64/qemu-system-i386-headless
