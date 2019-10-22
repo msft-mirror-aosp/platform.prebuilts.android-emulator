@@ -218,6 +218,7 @@ Notices for file(s):
 /emulator/qemu/darwin-x86_64/qemu-system-aarch64
 /emulator/qemu/darwin-x86_64/qemu-system-aarch64-headless
 /emulator/qemu/darwin-x86_64/qemu-system-i386
+/emulator/qemu/darwin-x86_64/qemu-system-armel-headless
 /emulator/qemu/darwin-x86_64/qemu-system-x86_64
 /emulator/qemu/darwin-x86_64/qemu-system-armel
 /emulator/qemu/darwin-x86_64/qemu-system-i386-headless
@@ -227,6 +228,7 @@ Notices for file(s):
 /emulator/lib/advancedFeaturesCanary.ini
 /emulator/lib/emu-original-feature-flags.protobuf
 /emulator/lib/advancedFeatures.ini
+/emulator/lib/snapshot.proto
 /emulator/lib/ca-bundle.pem
 /emulator/lib/pc-bios/efi-e1000.rom
 /emulator/lib/pc-bios/kvmvapic.bin
