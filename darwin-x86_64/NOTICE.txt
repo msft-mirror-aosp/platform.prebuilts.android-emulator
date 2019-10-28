@@ -230,6 +230,7 @@ Notices for file(s):
 /emulator/lib/advancedFeatures.ini
 /emulator/lib/snapshot.proto
 /emulator/lib/ca-bundle.pem
+/emulator/lib/snapshot-service.proto
 /emulator/lib/pc-bios/efi-e1000.rom
 /emulator/lib/pc-bios/kvmvapic.bin
 /emulator/lib/pc-bios/multiboot.bin
