@@ -30,6 +30,7 @@ Notices for file(s):
 /emulator/bin64/e2fsck
 /emulator/lib/snapshot.proto
 /emulator/lib/waterfall.proto
+/emulator/lib/snapshot-service.proto
 /emulator/lib/emulator_controller.proto
 /emulator/lib/hardware-properties.ini
 /emulator/lib/ca-bundle.pem
