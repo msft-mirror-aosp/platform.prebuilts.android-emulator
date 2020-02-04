@@ -37,10 +37,17 @@ echo Fetching Mac $build
 /google/data/ro/projects/android/fetch_artifact --bid $build --target sdk_tools_mac "$mac_zip"
 update_binaries "$mac_zip" "darwin-x86_64"
 
+rm -f "$linux_zip"
+rm -f "$mac_zip"
+
 printf "Upgrade emulator to emu-master-dev build $build\n\n" > emulator.commitmsg
+
+rm grpc/*.proto
+cp linux-x86_64/lib/*.proto grpc
+git add grpc
+
+set +e
 
 git commit -s -t emulator.commitmsg
 
 rm -f "emulator.commitmsg"
-rm -f "$linux_zip"
-rm -f "$mac_zip"
