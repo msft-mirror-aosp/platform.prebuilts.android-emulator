@@ -43,7 +43,7 @@ rm -f "$mac_zip"
 printf "Upgrade emulator to emu-master-dev build $build\n\n" > emulator.commitmsg
 
 rm grpc/*.proto
-cp linux-x86_64/lib/*.proto grpc
+mv linux-x86_64/lib/*.proto grpc
 git add grpc
 
 set +e
