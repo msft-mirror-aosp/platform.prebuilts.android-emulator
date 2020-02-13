@@ -14,6 +14,7 @@ function update_binaries {
 	rm -f "./emulator/emulator64-mips"
 	rm -f "./emulator/qemu/linux-x86_64/qemu-system-mipsel"
 	rm -f "./emulator/qemu/linux-x86_64/qemu-system-mips64el"
+	rm -f ./emulator/lib/*.proto
 	mv "emulator" "$dst"
 	git add "$dst"
 }
@@ -29,25 +30,20 @@ fi
 linux_zip="sdk-repo-linux-emulator-$build.zip"
 mac_zip="sdk-repo-darwin-emulator-$build.zip"
 
-echo Fetching Linux $build
+echo Fetching Emulator Linux build $build
 /google/data/ro/projects/android/fetch_artifact --bid $build --target sdk_tools_linux "$linux_zip"
 update_binaries "$linux_zip" "linux-x86_64"
 
-echo Fetching Mac $build
+echo Fetching Emulator Mac build $build
 /google/data/ro/projects/android/fetch_artifact --bid $build --target sdk_tools_mac "$mac_zip"
 update_binaries "$mac_zip" "darwin-x86_64"
 
-rm -f "$linux_zip"
-rm -f "$mac_zip"
+rm -f "$linux_zip" "$mac_zip" .fetch_*
 
-printf "Upgrade emulator to emu-master-dev build $build\n\n" > emulator.commitmsg
-
-rm grpc/*.proto
-mv linux-x86_64/lib/*.proto grpc
-git add grpc
+printf "Upgrade emulator to emu-master-dev build $build\n\n" > commitmsg.tmp
 
 set +e
 
-git commit -s -t emulator.commitmsg
+git commit -s -t commitmsg.tmp
 
-rm -f "emulator.commitmsg"
+rm -f "commitmsg.tmp"
