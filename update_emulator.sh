@@ -28,17 +28,12 @@ else
 fi
 
 linux_zip="sdk-repo-linux-emulator-$build.zip"
-mac_zip="sdk-repo-darwin-emulator-$build.zip"
 
 echo Fetching Emulator Linux build $build
 /google/data/ro/projects/android/fetch_artifact --bid $build --target sdk_tools_linux "$linux_zip"
 update_binaries "$linux_zip" "linux-x86_64"
 
-echo Fetching Emulator Mac build $build
-/google/data/ro/projects/android/fetch_artifact --bid $build --target sdk_tools_mac "$mac_zip"
-update_binaries "$mac_zip" "darwin-x86_64"
-
-rm -f "$linux_zip" "$mac_zip" .fetch_*
+rm -f "$linux_zip" .fetch_*
 
 printf "Upgrade emulator to emu-master-dev build $build\n\n" > commitmsg.tmp
 
