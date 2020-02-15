@@ -14,8 +14,7 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-option java_package = "android.emulation.control";
-option java_outer_classname = "";
+option java_package = "com.android.emulator";
 option objc_class_prefix = "AEC";
 
 package android.emulation.control;
@@ -76,6 +75,7 @@ service EmulatorController {
     // as will the SDP negotation.
     rpc receiveJsepMessage(RtcId) returns (JsepMsg) {}
 }
+
 
 message RtcId {
     // The unique identifier of this connection. You will have to use the same
@@ -156,7 +156,7 @@ message LogcatEntry {
         DEBUG = 3;
         INFO = 4;
         WARN = 5;
-        ERROR = 6;
+        ERR = 6;
         FATAL = 7;
         SILENT = 8;
     };
@@ -469,7 +469,7 @@ message EmulatorStatus {
     // True if the device has completed booting.
     // For P and later this information will accurate,
     // for older images we rely on adb.
-    bool booted = 3; 
+    bool booted = 3;
 
     // The current vm configuration
     VmConfiguration vmConfig = 4;
