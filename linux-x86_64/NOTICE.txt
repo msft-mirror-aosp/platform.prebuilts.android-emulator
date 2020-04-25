@@ -255,10 +255,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-EGL_translator.so
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 emugl_common.so
@@ -291,9 +287,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 The notices is included for the library: libvpx
@@ -369,10 +362,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-EGL_translator.so
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 emugl_common.so
@@ -421,9 +410,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 The notices is included for the library: ext4_utils
@@ -520,9 +506,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 The notices is included for the library: libpng
@@ -676,9 +659,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 The notices is included for the library: tinyobjloader
@@ -720,9 +700,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 The notices is included for the library: libjpeg
@@ -782,9 +759,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 The notices is included for the library: nlohmann_json
@@ -826,9 +800,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 The notices is included for the library: keymaster-3
@@ -1061,9 +1032,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 The notices is included for the library: libwebp
@@ -1126,39 +1094,24 @@ litigation is filed.
 
 ===========================================================
 Notices for file(s):
-./qemu-img
-./qemu/linux-x86_64/qemu-system-aarch64
-./qemu/linux-x86_64/qemu-system-aarch64-headless
-./qemu/linux-x86_64/qemu-system-armel
-./qemu/linux-x86_64/qemu-system-armel-headless
-./qemu/linux-x86_64/qemu-system-i386
-./qemu/linux-x86_64/qemu-system-i386-headless
-./qemu/linux-x86_64/qemu-system-x86_64
-./qemu/linux-x86_64/qemu-system-x86_64-headless
-The notices is included for the library: qemu
+./emulator
+lib64/gles_swiftshader/libEGL.so
+lib64/gles_swiftshader/libGLES_CM.so
+lib64/gles_swiftshader/libGLESv2.so
+The notices is included for the library: swiftshader
 
 ===========================================================
-The following points clarify the QEMU license:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-1) QEMU as a whole is released under the GNU General Public License,
-version 2.
+    http://www.apache.org/licenses/LICENSE-2.0
 
-2) Parts of QEMU have specific licenses which are compatible with the
-GNU General Public License, version 2. Hence each source file contains
-its own licensing information.  Source files with no licensing information
-are released under the GNU General Public License, version 2 or (at your
-option) any later version.
-
-As of July 2013, contributions under version 2 of the GNU General Public
-License (and no later version) are only accepted for the following files
-or directories: bsd-user/, linux-user/, hw/vfio/, hw/xen/xen_pt*.
-
-3) The Tiny Code Generator (TCG) is released under the BSD license
-   (see license headers in files).
-
-4) QEMU is a trademark of Fabrice Bellard.
-
-Fabrice Bellard and the QEMU team
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
 
 ===========================================================
@@ -1202,9 +1155,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 The notices is included for the library: libyuv
@@ -1281,10 +1231,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-EGL_translator.so
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 emugl_common.so
@@ -1380,191 +1326,6 @@ limitations under the License.
 
 ===========================================================
 Notices for file(s):
-./qemu/linux-x86_64/qemu-system-aarch64
-./qemu/linux-x86_64/qemu-system-aarch64-headless
-./qemu/linux-x86_64/qemu-system-armel
-./qemu/linux-x86_64/qemu-system-armel-headless
-./qemu/linux-x86_64/qemu-system-i386
-./qemu/linux-x86_64/qemu-system-i386-headless
-./qemu/linux-x86_64/qemu-system-x86_64
-./qemu/linux-x86_64/qemu-system-x86_64-headless
-The notices is included for the library: grpc++
-
-===========================================================
-Copyright 2014 gRPC authors.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
-
-===========================================================
-Notices for file(s):
-./emulator
-./emulator-check
-./emulator-crash-service
-./qemu/linux-x86_64/qemu-system-aarch64
-./qemu/linux-x86_64/qemu-system-aarch64-headless
-./qemu/linux-x86_64/qemu-system-armel
-./qemu/linux-x86_64/qemu-system-armel-headless
-./qemu/linux-x86_64/qemu-system-i386
-./qemu/linux-x86_64/qemu-system-i386-headless
-./qemu/linux-x86_64/qemu-system-x86_64
-./qemu/linux-x86_64/qemu-system-x86_64-headless
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
-OpenglRender.so
-android-studio.so
-The notices is included for the library: libprotobuf
-
-===========================================================
-Copyright 2008, Google Inc.
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are
-met:
-
-    * Redistributions of source code must retain the above copyright
-notice, this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above
-copyright notice, this list of conditions and the following disclaimer
-in the documentation and/or other materials provided with the
-distribution.
-    * Neither the name of Google Inc. nor the names of its
-contributors may be used to endorse or promote products derived from
-this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-Code generated by the Protocol Buffer compiler is owned by the owner
-of the input file used when generating it.  This code is not
-standalone and requires a support library to be linked with it.  This
-support library is itself covered by the above license.
-
-
-===========================================================
-Notices for file(s):
-./emulator
-./emulator-check
-./emulator-crash-service
-./qemu/linux-x86_64/qemu-system-aarch64
-./qemu/linux-x86_64/qemu-system-aarch64-headless
-./qemu/linux-x86_64/qemu-system-armel
-./qemu/linux-x86_64/qemu-system-armel-headless
-./qemu/linux-x86_64/qemu-system-i386
-./qemu/linux-x86_64/qemu-system-i386-headless
-./qemu/linux-x86_64/qemu-system-x86_64
-./qemu/linux-x86_64/qemu-system-x86_64-headless
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
-OpenglRender.so
-android-studio.so
-The notices is included for the library: breakpad
-
-===========================================================
-Copyright (c) 2006, Google Inc.
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are
-met:
-
-    * Redistributions of source code must retain the above copyright
-notice, this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above
-copyright notice, this list of conditions and the following disclaimer
-in the documentation and/or other materials provided with the
-distribution.
-    * Neither the name of Google Inc. nor the names of its
-contributors may be used to endorse or promote products derived from
-this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
---------------------------------------------------------------------
-
-Copyright 2001-2004 Unicode, Inc.
-
-Disclaimer
-
-This source code is provided as is by Unicode, Inc. No claims are
-made as to fitness for any particular purpose. No warranties of any
-kind are expressed or implied. The recipient agrees to determine
-applicability of information provided. If this file has been
-purchased on magnetic or optical media from Unicode, Inc., the
-sole remedy for any claim will be exchange of defective media
-within 90 days of receipt.
-
-Limitations on Rights to Redistribute This Code
-
-Unicode, Inc. hereby grants the right to freely use the information
-supplied in this file in the creation of products supporting the
-Unicode Standard, and to make copies of this file in any form
-for internal or external distribution as long as this notice
-remains attached.
-
-
-===========================================================
-Notices for file(s):
-./qemu/linux-x86_64/qemu-system-aarch64
-./qemu/linux-x86_64/qemu-system-aarch64-headless
-./qemu/linux-x86_64/qemu-system-armel
-./qemu/linux-x86_64/qemu-system-armel-headless
-./qemu/linux-x86_64/qemu-system-i386
-./qemu/linux-x86_64/qemu-system-i386-headless
-./qemu/linux-x86_64/qemu-system-x86_64
-./qemu/linux-x86_64/qemu-system-x86_64-headless
-The notices is included for the library: glib-2.0
-
-===========================================================
-Licensed under the GNU LIBRARY GENERAL PUBLIC LICENSE, Version 2.1 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    https://www.gnu.org/licenses/lgpl-2.1
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
-===========================================================
-Notices for file(s):
-EGL_translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 The notices is included for the library: astc-codec
 
@@ -1771,6 +1532,219 @@ The notices is included for the library: astc-codec
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+
+===========================================================
+Notices for file(s):
+./qemu/linux-x86_64/qemu-system-aarch64
+./qemu/linux-x86_64/qemu-system-aarch64-headless
+./qemu/linux-x86_64/qemu-system-armel
+./qemu/linux-x86_64/qemu-system-armel-headless
+./qemu/linux-x86_64/qemu-system-i386
+./qemu/linux-x86_64/qemu-system-i386-headless
+./qemu/linux-x86_64/qemu-system-x86_64
+./qemu/linux-x86_64/qemu-system-x86_64-headless
+The notices is included for the library: grpc++
+
+===========================================================
+Copyright 2014 gRPC authors.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
+===========================================================
+Notices for file(s):
+./emulator
+./emulator-check
+./emulator-crash-service
+./qemu/linux-x86_64/qemu-system-aarch64
+./qemu/linux-x86_64/qemu-system-aarch64-headless
+./qemu/linux-x86_64/qemu-system-armel
+./qemu/linux-x86_64/qemu-system-armel-headless
+./qemu/linux-x86_64/qemu-system-i386
+./qemu/linux-x86_64/qemu-system-i386-headless
+./qemu/linux-x86_64/qemu-system-x86_64
+./qemu/linux-x86_64/qemu-system-x86_64-headless
+OpenglRender.so
+android-studio.so
+The notices is included for the library: libprotobuf
+
+===========================================================
+Copyright 2008, Google Inc.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+    * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+    * Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Code generated by the Protocol Buffer compiler is owned by the owner
+of the input file used when generating it.  This code is not
+standalone and requires a support library to be linked with it.  This
+support library is itself covered by the above license.
+
+
+===========================================================
+Notices for file(s):
+./emulator
+./emulator-check
+./emulator-crash-service
+./qemu/linux-x86_64/qemu-system-aarch64
+./qemu/linux-x86_64/qemu-system-aarch64-headless
+./qemu/linux-x86_64/qemu-system-armel
+./qemu/linux-x86_64/qemu-system-armel-headless
+./qemu/linux-x86_64/qemu-system-i386
+./qemu/linux-x86_64/qemu-system-i386-headless
+./qemu/linux-x86_64/qemu-system-x86_64
+./qemu/linux-x86_64/qemu-system-x86_64-headless
+OpenglRender.so
+android-studio.so
+The notices is included for the library: breakpad
+
+===========================================================
+Copyright (c) 2006, Google Inc.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+    * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+    * Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+--------------------------------------------------------------------
+
+Copyright 2001-2004 Unicode, Inc.
+
+Disclaimer
+
+This source code is provided as is by Unicode, Inc. No claims are
+made as to fitness for any particular purpose. No warranties of any
+kind are expressed or implied. The recipient agrees to determine
+applicability of information provided. If this file has been
+purchased on magnetic or optical media from Unicode, Inc., the
+sole remedy for any claim will be exchange of defective media
+within 90 days of receipt.
+
+Limitations on Rights to Redistribute This Code
+
+Unicode, Inc. hereby grants the right to freely use the information
+supplied in this file in the creation of products supporting the
+Unicode Standard, and to make copies of this file in any form
+for internal or external distribution as long as this notice
+remains attached.
+
+
+===========================================================
+Notices for file(s):
+./qemu/linux-x86_64/qemu-system-aarch64
+./qemu/linux-x86_64/qemu-system-aarch64-headless
+./qemu/linux-x86_64/qemu-system-armel
+./qemu/linux-x86_64/qemu-system-armel-headless
+./qemu/linux-x86_64/qemu-system-i386
+./qemu/linux-x86_64/qemu-system-i386-headless
+./qemu/linux-x86_64/qemu-system-x86_64
+./qemu/linux-x86_64/qemu-system-x86_64-headless
+The notices is included for the library: glib-2.0
+
+===========================================================
+Licensed under the GNU LIBRARY GENERAL PUBLIC LICENSE, Version 2.1 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.gnu.org/licenses/lgpl-2.1
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+===========================================================
+Notices for file(s):
+./qemu-img
+./qemu/linux-x86_64/qemu-system-aarch64
+./qemu/linux-x86_64/qemu-system-aarch64-headless
+./qemu/linux-x86_64/qemu-system-armel
+./qemu/linux-x86_64/qemu-system-armel-headless
+./qemu/linux-x86_64/qemu-system-i386
+./qemu/linux-x86_64/qemu-system-i386-headless
+./qemu/linux-x86_64/qemu-system-x86_64
+./qemu/linux-x86_64/qemu-system-x86_64-headless
+The notices is included for the library: qemu
+
+===========================================================
+The following points clarify the QEMU license:
+
+1) QEMU as a whole is released under the GNU General Public License,
+version 2.
+
+2) Parts of QEMU have specific licenses which are compatible with the
+GNU General Public License, version 2. Hence each source file contains
+its own licensing information.  Source files with no licensing information
+are released under the GNU General Public License, version 2 or (at your
+option) any later version.
+
+As of July 2013, contributions under version 2 of the GNU General Public
+License (and no later version) are only accepted for the following files
+or directories: bsd-user/, linux-user/, hw/vfio/, hw/xen/xen_pt*.
+
+3) The Tiny Code Generator (TCG) is released under the BSD license
+   (see license headers in files).
+
+4) QEMU is a trademark of Fabrice Bellard.
+
+Fabrice Bellard and the QEMU team
 
 
 ===========================================================
@@ -1993,9 +1967,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 The notices is included for the library: LibXml2
@@ -2041,10 +2012,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-EGL_translator.so
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 emugl_common.so
@@ -2086,9 +2053,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 The notices is included for the library: ffmpeg
@@ -2123,9 +2087,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 The notices is included for the library: picosha2
@@ -2309,9 +2270,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 The notices is included for the library: libselinux
@@ -2342,7 +2300,7 @@ risk.
 
 ===========================================================
 Notices for file(s):
-GLES_V2_translator.so
+OpenglRender.so
 The notices is included for the library: angle
 
 ===========================================================
@@ -2393,9 +2351,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 The notices is included for the library: libcurl
@@ -2438,9 +2393,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 The notices is included for the library: boringssl
@@ -2712,9 +2664,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-GLES12Translator.so
-GLES_CM_translator.so
-GLES_V2_translator.so
 OpenglRender.so
 android-studio.so
 The notices is included for the library: protobuf
@@ -2838,28 +2787,6 @@ possible. They may also add themselves to the list below.
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-
-
-===========================================================
-Notices for file(s):
-./emulator
-lib64/gles_swiftshader/libEGL.so
-lib64/gles_swiftshader/libGLES_CM.so
-lib64/gles_swiftshader/libGLESv2.so
-The notices is included for the library: swiftshader
-
-===========================================================
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
 
 
 ===========================================================
