@@ -256,7 +256,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 emugl_common.so
 The notices is included for the library: lz4
 
@@ -288,7 +287,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 The notices is included for the library: libvpx
 
 ===========================================================
@@ -363,7 +361,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 emugl_common.so
 The notices is included for the library: uuid
 
@@ -411,7 +408,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 The notices is included for the library: ext4_utils
 
 ===========================================================
@@ -507,7 +503,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 The notices is included for the library: libpng
 
 ===========================================================
@@ -660,7 +655,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 The notices is included for the library: tinyobjloader
 
 ===========================================================
@@ -701,7 +695,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 The notices is included for the library: libjpeg
 
 ===========================================================
@@ -747,6 +740,76 @@ assumed by the product vendor.
 
 ===========================================================
 Notices for file(s):
+./qemu/linux-x86_64/qemu-system-aarch64
+./qemu/linux-x86_64/qemu-system-aarch64-headless
+./qemu/linux-x86_64/qemu-system-armel
+./qemu/linux-x86_64/qemu-system-armel-headless
+./qemu/linux-x86_64/qemu-system-i386
+./qemu/linux-x86_64/qemu-system-i386-headless
+./qemu/linux-x86_64/qemu-system-x86_64
+./qemu/linux-x86_64/qemu-system-x86_64-headless
+The notices is included for the library: dtc
+
+===========================================================
+Licensing and contribution policy of dtc and libfdt
+===================================================
+
+This dtc package contains two pieces of software: dtc itself, and
+libfdt which comprises the files in the libfdt/ subdirectory.  These
+two pieces of software, although closely related, are quite distinct.
+dtc does not incorporate or rely on libfdt for its operation, nor vice
+versa.  It is important that these two pieces of software have
+different license conditions.
+
+As SPDX license tags in each source file attest, dtc is licensed
+under the GNU GPL.  The full text of the GPL can be found in the file
+entitled 'GPL' which should be included in this package.  dtc code,
+therefore, may not be incorporated into works which do not have a GPL
+compatible license.
+
+libfdt, however, is GPL/BSD dual-licensed.  That is, it may be used
+either under the terms of the GPL, or under the terms of the 2-clause
+BSD license (aka the ISC license).  The full terms of that license can
+be found are in the file entitled 'BSD-2-Clause'. This is, in
+practice, equivalent to being BSD licensed, since the terms of the BSD
+license are strictly more permissive than the GPL.
+
+I made the decision to license libfdt in this way because I want to
+encourage widespread and correct usage of flattened device trees,
+including by proprietary or otherwise GPL-incompatible firmware or
+tools.  Allowing libfdt to be used under the terms of the BSD license
+makes that it easier for vendors or authors of such software to do so.
+
+This does mean that libfdt code could be "stolen" - say, included in a
+proprietary fimware and extended without contributing those extensions
+back to the libfdt mainline.  While I hope that doesn't happen, I
+believe the goal of allowing libfdt to be widely used is more
+important than avoiding that.  libfdt is quite small, and hardly
+rocket science; so the incentive for such impolite behaviour is small,
+and the inconvenience caused thereby is not dire.
+
+Licenses such as the LGPL which would allow code to be used in non-GPL
+software, but also require contributions to be returned were
+considered.  However, libfdt is designed to be used in firmwares and
+other environments with unusual technical constraints.  It's difficult
+to anticipate all possible changes which might be needed to meld
+libfdt into such environments and so difficult to suitably word a
+license that puts the boundary between what is and isn't permitted in
+the intended place.  Again, I judged encouraging widespread use of
+libfdt by keeping the license terms simple and familiar to be the more
+important goal.
+
+**IMPORTANT** It's intended that all of libfdt as released remain
+permissively licensed this way.  Therefore only contributions which
+are released under these terms can be merged into the libfdt mainline.
+
+
+David Gibson <david@gibson.dropbear.id.au>
+(principal original author of dtc and libfdt)
+2 November 2007
+
+===========================================================
+Notices for file(s):
 ./emulator
 ./emulator-check
 ./emulator-crash-service
@@ -760,7 +823,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 The notices is included for the library: nlohmann_json
 
 ===========================================================
@@ -801,7 +863,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 The notices is included for the library: keymaster-3
 
 ===========================================================
@@ -1033,7 +1094,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 The notices is included for the library: libwebp
 
 ===========================================================
@@ -1156,7 +1216,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 The notices is included for the library: libyuv
 
 ===========================================================
@@ -1232,7 +1291,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 emugl_common.so
 lib64/libtcmalloc_minimal.so.4
 The notices is included for the library: tcmalloc
@@ -1576,7 +1634,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 The notices is included for the library: libprotobuf
 
 ===========================================================
@@ -1629,7 +1686,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 The notices is included for the library: breakpad
 
 ===========================================================
@@ -1968,7 +2024,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 The notices is included for the library: LibXml2
 
 ===========================================================
@@ -2013,7 +2068,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 emugl_common.so
 The notices is included for the library: libunwind
 
@@ -2054,7 +2108,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 The notices is included for the library: ffmpeg
 
 ===========================================================
@@ -2088,7 +2141,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 The notices is included for the library: picosha2
 
 ===========================================================
@@ -2125,65 +2177,32 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
-The notices is included for the library: dtc
+The notices is included for the library: hostapd
 
 ===========================================================
-Licensing and contribution policy of dtc and libfdt
-===================================================
+wpa_supplicant and hostapd
+--------------------------
 
-This dtc package contains two pieces of software: dtc itself, and
-libfdt which comprises the files in the libfdt/ subdirectory.  These
-two pieces of software, although closely related, are quite distinct.
-dtc does not incorporate or rely on libfdt for its operation, nor vice
-versa.  It is important that these two pieces of software have
-different license conditions.
-
-As SPDX license tags in each source file attest, dtc is licensed
-under the GNU GPL.  The full text of the GPL can be found in the file
-entitled 'GPL' which should be included in this package.  dtc code,
-therefore, may not be incorporated into works which do not have a GPL
-compatible license.
-
-libfdt, however, is GPL/BSD dual-licensed.  That is, it may be used
-either under the terms of the GPL, or under the terms of the 2-clause
-BSD license (aka the ISC license).  The full terms of that license can
-be found are in the file entitled 'BSD-2-Clause'. This is, in
-practice, equivalent to being BSD licensed, since the terms of the BSD
-license are strictly more permissive than the GPL.
-
-I made the decision to license libfdt in this way because I want to
-encourage widespread and correct usage of flattened device trees,
-including by proprietary or otherwise GPL-incompatible firmware or
-tools.  Allowing libfdt to be used under the terms of the BSD license
-makes that it easier for vendors or authors of such software to do so.
-
-This does mean that libfdt code could be "stolen" - say, included in a
-proprietary fimware and extended without contributing those extensions
-back to the libfdt mainline.  While I hope that doesn't happen, I
-believe the goal of allowing libfdt to be widely used is more
-important than avoiding that.  libfdt is quite small, and hardly
-rocket science; so the incentive for such impolite behaviour is small,
-and the inconvenience caused thereby is not dire.
-
-Licenses such as the LGPL which would allow code to be used in non-GPL
-software, but also require contributions to be returned were
-considered.  However, libfdt is designed to be used in firmwares and
-other environments with unusual technical constraints.  It's difficult
-to anticipate all possible changes which might be needed to meld
-libfdt into such environments and so difficult to suitably word a
-license that puts the boundary between what is and isn't permitted in
-the intended place.  Again, I judged encouraging widespread use of
-libfdt by keeping the license terms simple and familiar to be the more
-important goal.
-
-**IMPORTANT** It's intended that all of libfdt as released remain
-permissively licensed this way.  Therefore only contributions which
-are released under these terms can be merged into the libfdt mainline.
+Copyright (c) 2002-2012, Jouni Malinen <j@w1.fi> and contributors
+All Rights Reserved.
 
 
-David Gibson <david@gibson.dropbear.id.au>
-(principal original author of dtc and libfdt)
-2 November 2007
+See the README file for the current license terms.
+
+This software was previously distributed under BSD/GPL v2 dual license
+terms that allowed either of those license alternatives to be
+selected. As of February 11, 2012, the project has chosen to use only
+the BSD license option for future distribution. As such, the GPL v2
+license option is no longer used. It should be noted that the BSD
+license option (the one with advertisement clause removed) is compatible
+with GPL and as such, does not prevent use of this software in projects
+that use GPL.
+
+Some of the files may still include pointers to GPL version 2 license
+terms. However, such copyright and license notifications are maintained
+only for attribution purposes and any distribution of this software
+after February 11, 2012 is no longer under the GPL v2 option.
+
 
 ===========================================================
 Notices for file(s):
@@ -2271,7 +2290,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 The notices is included for the library: libselinux
 
 ===========================================================
@@ -2352,7 +2370,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 The notices is included for the library: libcurl
 
 ===========================================================
@@ -2394,7 +2411,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 The notices is included for the library: boringssl
 
 ===========================================================
@@ -2665,7 +2681,6 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 OpenglRender.so
-android-studio.so
 The notices is included for the library: protobuf
 
 ===========================================================

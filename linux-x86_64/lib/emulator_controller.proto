@@ -11,6 +11,16 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+// Note that if you add/remove methods in this file you must update
+// the metrics sql as well ./android/scripts/gen-grpc-sql.py
+//
+// Please group deleted methods in a block including the date (MM/DD/YY)
+// it was removed. This enables us to easily keep metrics around after removal
+//
+// List of deleted methods
+// rpc iWasDeleted (03/12/12)
+// ...
 syntax = "proto3";
 
 option java_multiple_files = true;
@@ -96,6 +106,11 @@ service EmulatorController {
   // and wait start producing images once the display becomes active, again
   // producing a single empty image when the display becomes inactive.
   rpc streamScreenshot(ImageFormat) returns (stream Image) {}
+
+  // Streams a series of audio packets in the desired format.
+  // A new frame will be delivered whenever the emulated device
+  // produces a new audio frame.
+  rpc streamAudio(AudioFormat) returns (stream AudioPacket) {}
 
   // Returns the last 128Kb of logcat output from the emulator
   // Note that parsed logcat messages are only available after L (Api >23).
@@ -250,7 +265,6 @@ message SensorValue {
   // values.
   ParameterValue value = 3;
 }
-
 
 message LogMessage {
   // [Output Only] The contents of the log output.
@@ -715,3 +729,32 @@ message EmulatorStatus {
   // key valure pairs.
   EntryList hardwareConfig = 5;
 };
+
+message AudioFormat {
+  enum SampleFormat {
+    AUD_FMT_U8 = 0;  // Unsigned 8 bit
+    AUD_FMT_S16 = 1; // Signed 16 bit (little endian)
+  };
+
+  enum Channels {
+    Mono = 0;
+    Stereo = 1;
+  };
+
+  // Sampling rate to use, defaulting to 44100 if this is not set.
+  // Note, that android devices typically will not use a sampling
+  // rate higher than 48kHz. See https://developer.android.com/ndk/guides/audio.
+  uint64 samplingRate = 1;
+  Channels channels = 2;
+  SampleFormat format = 3;
+};
+
+message AudioPacket {
+  AudioFormat format = 1;
+
+  // Unix epoch in us when this frame was captured.
+  uint64 timestamp = 2;
+
+  // Contains a sample in the given audio format.
+  bytes audio = 3;
+}
