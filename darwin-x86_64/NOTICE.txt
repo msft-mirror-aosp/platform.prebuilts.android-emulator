@@ -12,6 +12,7 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 OpenglRender.dylib
 emugl_common.dylib
 The notices is included for the library: lz4
@@ -35,6 +36,7 @@ Notices for file(s):
 ./emulator
 ./emulator-check
 ./emulator-crash-service
+./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -43,7 +45,9 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 OpenglRender.dylib
+emugl_common.dylib
 The notices is included for the library: libvpx
 
 ===========================================================
@@ -129,6 +133,7 @@ Notices for file(s):
 ./emulator
 ./emulator-check
 ./emulator-crash-service
+./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -137,7 +142,9 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 OpenglRender.dylib
+emugl_common.dylib
 The notices is included for the library: ext4_utils
 
 ===========================================================
@@ -164,6 +171,7 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 The notices is included for the library: grpc
 
 ===========================================================
@@ -187,6 +195,7 @@ Notices for file(s):
 ./emulator
 ./emulator-check
 ./emulator-crash-service
+./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -195,7 +204,9 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 OpenglRender.dylib
+emugl_common.dylib
 The notices is included for the library: libpng
 
 ===========================================================
@@ -361,6 +372,7 @@ Notices for file(s):
 ./emulator
 ./emulator-check
 ./emulator-crash-service
+./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -369,7 +381,9 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 OpenglRender.dylib
+emugl_common.dylib
 The notices is included for the library: tinyobjloader
 
 ===========================================================
@@ -423,6 +437,7 @@ Notices for file(s):
 ./emulator
 ./emulator-check
 ./emulator-crash-service
+./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -431,7 +446,9 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 OpenglRender.dylib
+emugl_common.dylib
 The notices is included for the library: libjpeg
 
 ===========================================================
@@ -485,6 +502,42 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
+The notices is included for the library: upb
+
+===========================================================
+Copyright 2014 gRPC authors.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
+===========================================================
+Notices for file(s):
+./emulator
+./emulator-check
+./emulator-crash-service
+./qemu-img
+./qemu/darwin-x86_64/qemu-system-aarch64
+./qemu/darwin-x86_64/qemu-system-aarch64-headless
+./qemu/darwin-x86_64/qemu-system-armel
+./qemu/darwin-x86_64/qemu-system-armel-headless
+./qemu/darwin-x86_64/qemu-system-i386
+./qemu/darwin-x86_64/qemu-system-i386-headless
+./qemu/darwin-x86_64/qemu-system-x86_64
+./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
+OpenglRender.dylib
+emugl_common.dylib
 The notices is included for the library: hostapd
 
 ===========================================================
@@ -517,6 +570,7 @@ Notices for file(s):
 ./emulator
 ./emulator-check
 ./emulator-crash-service
+./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -525,7 +579,9 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 OpenglRender.dylib
+emugl_common.dylib
 The notices is included for the library: nlohmann_json
 
 ===========================================================
@@ -557,6 +613,7 @@ Notices for file(s):
 ./emulator
 ./emulator-check
 ./emulator-crash-service
+./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -565,7 +622,9 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 OpenglRender.dylib
+emugl_common.dylib
 The notices is included for the library: keymaster-3
 
 ===========================================================
@@ -788,6 +847,7 @@ Notices for file(s):
 ./emulator
 ./emulator-check
 ./emulator-crash-service
+./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -796,7 +856,9 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 OpenglRender.dylib
+emugl_common.dylib
 The notices is included for the library: libwebp
 
 ===========================================================
@@ -853,6 +915,28 @@ constitute direct or contributory patent infringement, or inducement of
 patent infringement, then any patent rights granted to you under this License
 for these implementations of WebM shall terminate as of the date such
 litigation is filed.
+
+
+===========================================================
+Notices for file(s):
+./emulator
+lib64/gles_swiftshader/libEGL.dylib
+lib64/gles_swiftshader/libGLES_CM.dylib
+lib64/gles_swiftshader/libGLESv2.dylib
+The notices is included for the library: swiftshader
+
+===========================================================
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
 
 ===========================================================
@@ -1075,6 +1159,7 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 The notices is included for the library: address_sorting
 
 ===========================================================
@@ -1098,6 +1183,7 @@ Notices for file(s):
 ./emulator
 ./emulator-check
 ./emulator-crash-service
+./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -1106,7 +1192,9 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 OpenglRender.dylib
+emugl_common.dylib
 The notices is included for the library: libyuv
 
 ===========================================================
@@ -1151,6 +1239,7 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 The notices is included for the library: c-ares
 
 ===========================================================
@@ -1340,6 +1429,7 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 The notices is included for the library: grpc++
 
 ===========================================================
@@ -1363,6 +1453,8 @@ Notices for file(s):
 ./emulator
 ./emulator-check
 ./emulator-crash-service
+./perfetto-protozero-protoc-plugin
+./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -1371,7 +1463,9 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 OpenglRender.dylib
+emugl_common.dylib
 The notices is included for the library: libprotobuf
 
 ===========================================================
@@ -1415,6 +1509,7 @@ Notices for file(s):
 ./emulator
 ./emulator-check
 ./emulator-crash-service
+./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -1423,7 +1518,9 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 OpenglRender.dylib
+emugl_common.dylib
 The notices is included for the library: breakpad
 
 ===========================================================
@@ -1478,31 +1575,6 @@ Unicode Standard, and to make copies of this file in any form
 for internal or external distribution as long as this notice
 remains attached.
 
-
-===========================================================
-Notices for file(s):
-./qemu/darwin-x86_64/qemu-system-aarch64
-./qemu/darwin-x86_64/qemu-system-aarch64-headless
-./qemu/darwin-x86_64/qemu-system-armel
-./qemu/darwin-x86_64/qemu-system-armel-headless
-./qemu/darwin-x86_64/qemu-system-i386
-./qemu/darwin-x86_64/qemu-system-i386-headless
-./qemu/darwin-x86_64/qemu-system-x86_64
-./qemu/darwin-x86_64/qemu-system-x86_64-headless
-The notices is included for the library: glib-2.0
-
-===========================================================
-Licensed under the GNU LIBRARY GENERAL PUBLIC LICENSE, Version 2.1 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    https://www.gnu.org/licenses/lgpl-2.1
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
 
 ===========================================================
 Notices for file(s):
@@ -1752,6 +1824,7 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 The notices is included for the library: gpr
 
 ===========================================================
@@ -1775,6 +1848,7 @@ Notices for file(s):
 ./emulator
 ./emulator-check
 ./emulator-crash-service
+./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -1783,7 +1857,9 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 OpenglRender.dylib
+emugl_common.dylib
 The notices is included for the library: LibXml2
 
 ===========================================================
@@ -1817,6 +1893,7 @@ Notices for file(s):
 ./emulator
 ./emulator-check
 ./emulator-crash-service
+./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -1825,7 +1902,41 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 OpenglRender.dylib
+emugl_common.dylib
+The notices is included for the library: glib-2.0
+
+===========================================================
+Licensed under the GNU LIBRARY GENERAL PUBLIC LICENSE, Version 2.1 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.gnu.org/licenses/lgpl-2.1
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+===========================================================
+Notices for file(s):
+./emulator
+./emulator-check
+./emulator-crash-service
+./qemu-img
+./qemu/darwin-x86_64/qemu-system-aarch64
+./qemu/darwin-x86_64/qemu-system-aarch64-headless
+./qemu/darwin-x86_64/qemu-system-armel
+./qemu/darwin-x86_64/qemu-system-armel-headless
+./qemu/darwin-x86_64/qemu-system-i386
+./qemu/darwin-x86_64/qemu-system-i386-headless
+./qemu/darwin-x86_64/qemu-system-x86_64
+./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
+OpenglRender.dylib
+emugl_common.dylib
 The notices is included for the library: ffmpeg
 
 ===========================================================
@@ -1850,6 +1961,7 @@ Notices for file(s):
 ./emulator
 ./emulator-check
 ./emulator-crash-service
+./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -1858,7 +1970,9 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 OpenglRender.dylib
+emugl_common.dylib
 The notices is included for the library: picosha2
 
 ===========================================================
@@ -1895,6 +2009,7 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 The notices is included for the library: dtc
 
 ===========================================================
@@ -2032,6 +2147,7 @@ Notices for file(s):
 ./emulator
 ./emulator-check
 ./emulator-crash-service
+./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -2040,7 +2156,9 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 OpenglRender.dylib
+emugl_common.dylib
 The notices is included for the library: libselinux
 
 ===========================================================
@@ -2069,7 +2187,9 @@ risk.
 
 ===========================================================
 Notices for file(s):
+./emulator
 OpenglRender.dylib
+lib64/libshadertranslator.dylib
 The notices is included for the library: angle
 
 ===========================================================
@@ -2112,6 +2232,7 @@ Notices for file(s):
 ./emulator
 ./emulator-check
 ./emulator-crash-service
+./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -2120,7 +2241,9 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 OpenglRender.dylib
+emugl_common.dylib
 The notices is included for the library: libcurl
 
 ===========================================================
@@ -2153,6 +2276,7 @@ Notices for file(s):
 ./emulator
 ./emulator-check
 ./emulator-crash-service
+./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -2161,7 +2285,9 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 OpenglRender.dylib
+emugl_common.dylib
 The notices is included for the library: boringssl
 
 ===========================================================
@@ -2423,6 +2549,8 @@ Notices for file(s):
 ./emulator
 ./emulator-check
 ./emulator-crash-service
+./perfetto-protozero-protoc-plugin
+./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -2431,7 +2559,9 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 OpenglRender.dylib
+emugl_common.dylib
 The notices is included for the library: protobuf
 
 ===========================================================
@@ -2474,8 +2604,6 @@ support library is itself covered by the above license.
 Notices for file(s):
 ./emulator
 lib64/vulkan/libMoltenVK.dylib
-lib64/vulkan/libportability_icd-debug.dylib
-lib64/vulkan/libportability_icd.dylib
 lib64/vulkan/libvk_swiftshader.dylib
 lib64/vulkan/libvulkan.dylib
 The notices is included for the library: vulkan-sdk
@@ -2725,6 +2853,7 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-i386-headless
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
 The notices is included for the library: pixman-1
 
 ===========================================================
@@ -2793,26 +2922,4 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
-===========================================================
-Notices for file(s):
-./emulator
-lib64/gles_swiftshader/libEGL.dylib
-lib64/gles_swiftshader/libGLES_CM.dylib
-lib64/gles_swiftshader/libGLESv2.dylib
-The notices is included for the library: swiftshader
-
-===========================================================
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
 
