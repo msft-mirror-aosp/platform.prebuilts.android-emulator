@@ -438,44 +438,11 @@ limitations under the License.
 
 ===========================================================
 Notices for file(s):
+./emulator
+./emulator-check
+./emulator-crash-service
 ./goldfish-webrtc-bridge
-The notices is included for the library: webrtc
-
-===========================================================
-Copyright (c) 2011, The WebRTC project authors. All rights reserved.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are
-met:
-
-  * Redistributions of source code must retain the above copyright
-    notice, this list of conditions and the following disclaimer.
-
-  * Redistributions in binary form must reproduce the above copyright
-    notice, this list of conditions and the following disclaimer in
-    the documentation and/or other materials provided with the
-    distribution.
-
-  * Neither the name of Google nor the names of its contributors may
-    be used to endorse or promote products derived from this software
-    without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-
-===========================================================
-Notices for file(s):
-./goldfish-webrtc-bridge
+./qemu-img
 ./qemu/linux-x86_64/qemu-system-aarch64
 ./qemu/linux-x86_64/qemu-system-aarch64-headless
 ./qemu/linux-x86_64/qemu-system-armel
@@ -485,6 +452,8 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 ./qsn
+OpenglRender.so
+emugl_common.so
 The notices is included for the library: grpc
 
 ===========================================================
@@ -766,7 +735,11 @@ assumed by the product vendor.
 
 ===========================================================
 Notices for file(s):
+./emulator
+./emulator-check
+./emulator-crash-service
 ./goldfish-webrtc-bridge
+./qemu-img
 ./qemu/linux-x86_64/qemu-system-aarch64
 ./qemu/linux-x86_64/qemu-system-aarch64-headless
 ./qemu/linux-x86_64/qemu-system-armel
@@ -776,6 +749,8 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 ./qsn
+OpenglRender.so
+emugl_common.so
 The notices is included for the library: upb
 
 ===========================================================
@@ -1454,7 +1429,11 @@ The notices is included for the library: astc-codec
 
 ===========================================================
 Notices for file(s):
+./emulator
+./emulator-check
+./emulator-crash-service
 ./goldfish-webrtc-bridge
+./qemu-img
 ./qemu/linux-x86_64/qemu-system-aarch64
 ./qemu/linux-x86_64/qemu-system-aarch64-headless
 ./qemu/linux-x86_64/qemu-system-armel
@@ -1464,6 +1443,8 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 ./qsn
+OpenglRender.so
+emugl_common.so
 The notices is included for the library: address_sorting
 
 ===========================================================
@@ -1536,7 +1517,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ===========================================================
 Notices for file(s):
+./emulator
+./emulator-check
+./emulator-crash-service
 ./goldfish-webrtc-bridge
+./qemu-img
 ./qemu/linux-x86_64/qemu-system-aarch64
 ./qemu/linux-x86_64/qemu-system-aarch64-headless
 ./qemu/linux-x86_64/qemu-system-armel
@@ -1546,6 +1531,8 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 ./qsn
+OpenglRender.so
+emugl_common.so
 The notices is included for the library: c-ares
 
 ===========================================================
@@ -1671,7 +1658,11 @@ limitations under the License.
 
 ===========================================================
 Notices for file(s):
+./emulator
+./emulator-check
+./emulator-crash-service
 ./goldfish-webrtc-bridge
+./qemu-img
 ./qemu/linux-x86_64/qemu-system-aarch64
 ./qemu/linux-x86_64/qemu-system-aarch64-headless
 ./qemu/linux-x86_64/qemu-system-armel
@@ -1681,6 +1672,8 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 ./qsn
+OpenglRender.so
+emugl_common.so
 The notices is included for the library: grpc++
 
 ===========================================================
@@ -2047,7 +2040,11 @@ limitations under the License.
 
 ===========================================================
 Notices for file(s):
+./emulator
+./emulator-check
+./emulator-crash-service
 ./goldfish-webrtc-bridge
+./qemu-img
 ./qemu/linux-x86_64/qemu-system-aarch64
 ./qemu/linux-x86_64/qemu-system-aarch64-headless
 ./qemu/linux-x86_64/qemu-system-armel
@@ -2057,6 +2054,8 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 ./qsn
+OpenglRender.so
+emugl_common.so
 The notices is included for the library: gpr
 
 ===========================================================
