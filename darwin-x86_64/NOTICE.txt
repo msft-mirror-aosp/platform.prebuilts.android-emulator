@@ -380,10 +380,6 @@ limitations under the License.
 
 ===========================================================
 Notices for file(s):
-./emulator
-./emulator-check
-./emulator-crash-service
-./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -393,34 +389,65 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
 ./qsn
-OpenglRender.dylib
-emugl_common.dylib
-The notices is included for the library: hostapd
+The notices is included for the library: dtc
 
 ===========================================================
-wpa_supplicant and hostapd
---------------------------
+Licensing and contribution policy of dtc and libfdt
+===================================================
 
-Copyright (c) 2002-2012, Jouni Malinen <j@w1.fi> and contributors
-All Rights Reserved.
+This dtc package contains two pieces of software: dtc itself, and
+libfdt which comprises the files in the libfdt/ subdirectory.  These
+two pieces of software, although closely related, are quite distinct.
+dtc does not incorporate or rely on libfdt for its operation, nor vice
+versa.  It is important that these two pieces of software have
+different license conditions.
+
+As SPDX license tags in each source file attest, dtc is licensed
+under the GNU GPL.  The full text of the GPL can be found in the file
+entitled 'GPL' which should be included in this package.  dtc code,
+therefore, may not be incorporated into works which do not have a GPL
+compatible license.
+
+libfdt, however, is GPL/BSD dual-licensed.  That is, it may be used
+either under the terms of the GPL, or under the terms of the 2-clause
+BSD license (aka the ISC license).  The full terms of that license can
+be found are in the file entitled 'BSD-2-Clause'. This is, in
+practice, equivalent to being BSD licensed, since the terms of the BSD
+license are strictly more permissive than the GPL.
+
+I made the decision to license libfdt in this way because I want to
+encourage widespread and correct usage of flattened device trees,
+including by proprietary or otherwise GPL-incompatible firmware or
+tools.  Allowing libfdt to be used under the terms of the BSD license
+makes that it easier for vendors or authors of such software to do so.
+
+This does mean that libfdt code could be "stolen" - say, included in a
+proprietary fimware and extended without contributing those extensions
+back to the libfdt mainline.  While I hope that doesn't happen, I
+believe the goal of allowing libfdt to be widely used is more
+important than avoiding that.  libfdt is quite small, and hardly
+rocket science; so the incentive for such impolite behaviour is small,
+and the inconvenience caused thereby is not dire.
+
+Licenses such as the LGPL which would allow code to be used in non-GPL
+software, but also require contributions to be returned were
+considered.  However, libfdt is designed to be used in firmwares and
+other environments with unusual technical constraints.  It's difficult
+to anticipate all possible changes which might be needed to meld
+libfdt into such environments and so difficult to suitably word a
+license that puts the boundary between what is and isn't permitted in
+the intended place.  Again, I judged encouraging widespread use of
+libfdt by keeping the license terms simple and familiar to be the more
+important goal.
+
+**IMPORTANT** It's intended that all of libfdt as released remain
+permissively licensed this way.  Therefore only contributions which
+are released under these terms can be merged into the libfdt mainline.
 
 
-See the README file for the current license terms.
-
-This software was previously distributed under BSD/GPL v2 dual license
-terms that allowed either of those license alternatives to be
-selected. As of February 11, 2012, the project has chosen to use only
-the BSD license option for future distribution. As such, the GPL v2
-license option is no longer used. It should be noted that the BSD
-license option (the one with advertisement clause removed) is compatible
-with GPL and as such, does not prevent use of this software in projects
-that use GPL.
-
-Some of the files may still include pointers to GPL version 2 license
-terms. However, such copyright and license notifications are maintained
-only for attribution purposes and any distribution of this software
-after February 11, 2012 is no longer under the GPL v2 option.
-
+David Gibson <david@gibson.dropbear.id.au>
+(principal original author of dtc and libfdt)
+2 November 2007
 
 ===========================================================
 Notices for file(s):
@@ -675,6 +702,43 @@ The notices is included for the library: keymaster-3
 
    END OF TERMS AND CONDITIONS
 
+
+
+===========================================================
+Notices for file(s):
+./qemu/darwin-x86_64/qemu-system-aarch64
+./qemu/darwin-x86_64/qemu-system-aarch64-headless
+./qemu/darwin-x86_64/qemu-system-armel
+./qemu/darwin-x86_64/qemu-system-armel-headless
+./qemu/darwin-x86_64/qemu-system-i386
+./qemu/darwin-x86_64/qemu-system-i386-headless
+./qemu/darwin-x86_64/qemu-system-x86_64
+./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
+The notices is included for the library: jsoncpp
+
+===========================================================
+The following points clarify the QEMU license:
+
+1) QEMU as a whole is released under the GNU General Public License,
+version 2.
+
+2) Parts of QEMU have specific licenses which are compatible with the
+GNU General Public License, version 2. Hence each source file contains
+its own licensing information.  Source files with no licensing information
+are released under the GNU General Public License, version 2 or (at your
+option) any later version.
+
+As of July 2013, contributions under version 2 of the GNU General Public
+License (and no later version) are only accepted for the following files
+or directories: bsd-user/, linux-user/, hw/vfio/, hw/xen/xen_pt*.
+
+3) The Tiny Code Generator (TCG) is released under the BSD license
+   (see license headers in files).
+
+4) QEMU is a trademark of Fabrice Bellard.
+
+Fabrice Bellard and the QEMU team
 
 
 ===========================================================
@@ -1213,57 +1277,6 @@ Notices for file(s):
 ./qsn
 OpenglRender.dylib
 emugl_common.dylib
-The notices is included for the library: libyuv
-
-===========================================================
-Copyright 2011 The LibYuv Project Authors. All rights reserved.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are
-met:
-
-  * Redistributions of source code must retain the above copyright
-    notice, this list of conditions and the following disclaimer.
-
-  * Redistributions in binary form must reproduce the above copyright
-    notice, this list of conditions and the following disclaimer in
-    the documentation and/or other materials provided with the
-    distribution.
-
-  * Neither the name of Google nor the names of its contributors may
-    be used to endorse or promote products derived from this software
-    without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-
-===========================================================
-Notices for file(s):
-./emulator
-./emulator-check
-./emulator-crash-service
-./qemu-img
-./qemu/darwin-x86_64/qemu-system-aarch64
-./qemu/darwin-x86_64/qemu-system-aarch64-headless
-./qemu/darwin-x86_64/qemu-system-armel
-./qemu/darwin-x86_64/qemu-system-armel-headless
-./qemu/darwin-x86_64/qemu-system-i386
-./qemu/darwin-x86_64/qemu-system-i386-headless
-./qemu/darwin-x86_64/qemu-system-x86_64
-./qemu/darwin-x86_64/qemu-system-x86_64-headless
-./qsn
-OpenglRender.dylib
-emugl_common.dylib
 The notices is included for the library: c-ares
 
 ===========================================================
@@ -1442,6 +1455,57 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+
+===========================================================
+Notices for file(s):
+./emulator
+./emulator-check
+./emulator-crash-service
+./qemu-img
+./qemu/darwin-x86_64/qemu-system-aarch64
+./qemu/darwin-x86_64/qemu-system-aarch64-headless
+./qemu/darwin-x86_64/qemu-system-armel
+./qemu/darwin-x86_64/qemu-system-armel-headless
+./qemu/darwin-x86_64/qemu-system-i386
+./qemu/darwin-x86_64/qemu-system-i386-headless
+./qemu/darwin-x86_64/qemu-system-x86_64
+./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
+OpenglRender.dylib
+emugl_common.dylib
+The notices is included for the library: libyuv
+
+===========================================================
+Copyright 2011 The LibYuv Project Authors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+  * Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+
+  * Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the
+    distribution.
+
+  * Neither the name of Google nor the names of its contributors may
+    be used to endorse or promote products derived from this software
+    without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
 
 ===========================================================
 Notices for file(s):
@@ -1798,6 +1862,38 @@ limitations under the License.
 
 ===========================================================
 Notices for file(s):
+./emulator
+./emulator-check
+./emulator-crash-service
+./qemu-img
+./qemu/darwin-x86_64/qemu-system-aarch64
+./qemu/darwin-x86_64/qemu-system-aarch64-headless
+./qemu/darwin-x86_64/qemu-system-armel
+./qemu/darwin-x86_64/qemu-system-armel-headless
+./qemu/darwin-x86_64/qemu-system-i386
+./qemu/darwin-x86_64/qemu-system-i386-headless
+./qemu/darwin-x86_64/qemu-system-x86_64
+./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
+OpenglRender.dylib
+emugl_common.dylib
+The notices is included for the library: glib-2.0
+
+===========================================================
+Licensed under the GNU LIBRARY GENERAL PUBLIC LICENSE, Version 2.1 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.gnu.org/licenses/lgpl-2.1
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+===========================================================
+Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -1821,28 +1917,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-
-===========================================================
-Notices for file(s):
-./emulator-crash-service
-./qemu/darwin-x86_64/qemu-system-aarch64
-./qemu/darwin-x86_64/qemu-system-armel
-./qemu/darwin-x86_64/qemu-system-i386
-./qemu/darwin-x86_64/qemu-system-x86_64
-The notices is included for the library: Qt WebEngineWidgets
-
-===========================================================
-Licensed under the GNU LIBRARY GENERAL PUBLIC LICENSE, Version 2 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    https://www.gnu.org/licenses/lgpl-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
 
 ===========================================================
 Notices for file(s):
@@ -1941,38 +2015,6 @@ Notices for file(s):
 ./qsn
 OpenglRender.dylib
 emugl_common.dylib
-The notices is included for the library: glib-2.0
-
-===========================================================
-Licensed under the GNU LIBRARY GENERAL PUBLIC LICENSE, Version 2.1 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    https://www.gnu.org/licenses/lgpl-2.1
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
-===========================================================
-Notices for file(s):
-./emulator
-./emulator-check
-./emulator-crash-service
-./qemu-img
-./qemu/darwin-x86_64/qemu-system-aarch64
-./qemu/darwin-x86_64/qemu-system-aarch64-headless
-./qemu/darwin-x86_64/qemu-system-armel
-./qemu/darwin-x86_64/qemu-system-armel-headless
-./qemu/darwin-x86_64/qemu-system-i386
-./qemu/darwin-x86_64/qemu-system-i386-headless
-./qemu/darwin-x86_64/qemu-system-x86_64
-./qemu/darwin-x86_64/qemu-system-x86_64-headless
-./qsn
-OpenglRender.dylib
-emugl_common.dylib
 The notices is included for the library: ffmpeg
 
 ===========================================================
@@ -2037,6 +2079,10 @@ SOFTWARE.
 
 ===========================================================
 Notices for file(s):
+./emulator
+./emulator-check
+./emulator-crash-service
+./qemu-img
 ./qemu/darwin-x86_64/qemu-system-aarch64
 ./qemu/darwin-x86_64/qemu-system-aarch64-headless
 ./qemu/darwin-x86_64/qemu-system-armel
@@ -2046,65 +2092,34 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-x86_64
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
 ./qsn
-The notices is included for the library: dtc
+OpenglRender.dylib
+emugl_common.dylib
+The notices is included for the library: hostapd
 
 ===========================================================
-Licensing and contribution policy of dtc and libfdt
-===================================================
+wpa_supplicant and hostapd
+--------------------------
 
-This dtc package contains two pieces of software: dtc itself, and
-libfdt which comprises the files in the libfdt/ subdirectory.  These
-two pieces of software, although closely related, are quite distinct.
-dtc does not incorporate or rely on libfdt for its operation, nor vice
-versa.  It is important that these two pieces of software have
-different license conditions.
-
-As SPDX license tags in each source file attest, dtc is licensed
-under the GNU GPL.  The full text of the GPL can be found in the file
-entitled 'GPL' which should be included in this package.  dtc code,
-therefore, may not be incorporated into works which do not have a GPL
-compatible license.
-
-libfdt, however, is GPL/BSD dual-licensed.  That is, it may be used
-either under the terms of the GPL, or under the terms of the 2-clause
-BSD license (aka the ISC license).  The full terms of that license can
-be found are in the file entitled 'BSD-2-Clause'. This is, in
-practice, equivalent to being BSD licensed, since the terms of the BSD
-license are strictly more permissive than the GPL.
-
-I made the decision to license libfdt in this way because I want to
-encourage widespread and correct usage of flattened device trees,
-including by proprietary or otherwise GPL-incompatible firmware or
-tools.  Allowing libfdt to be used under the terms of the BSD license
-makes that it easier for vendors or authors of such software to do so.
-
-This does mean that libfdt code could be "stolen" - say, included in a
-proprietary fimware and extended without contributing those extensions
-back to the libfdt mainline.  While I hope that doesn't happen, I
-believe the goal of allowing libfdt to be widely used is more
-important than avoiding that.  libfdt is quite small, and hardly
-rocket science; so the incentive for such impolite behaviour is small,
-and the inconvenience caused thereby is not dire.
-
-Licenses such as the LGPL which would allow code to be used in non-GPL
-software, but also require contributions to be returned were
-considered.  However, libfdt is designed to be used in firmwares and
-other environments with unusual technical constraints.  It's difficult
-to anticipate all possible changes which might be needed to meld
-libfdt into such environments and so difficult to suitably word a
-license that puts the boundary between what is and isn't permitted in
-the intended place.  Again, I judged encouraging widespread use of
-libfdt by keeping the license terms simple and familiar to be the more
-important goal.
-
-**IMPORTANT** It's intended that all of libfdt as released remain
-permissively licensed this way.  Therefore only contributions which
-are released under these terms can be merged into the libfdt mainline.
+Copyright (c) 2002-2012, Jouni Malinen <j@w1.fi> and contributors
+All Rights Reserved.
 
 
-David Gibson <david@gibson.dropbear.id.au>
-(principal original author of dtc and libfdt)
-2 November 2007
+See the README file for the current license terms.
+
+This software was previously distributed under BSD/GPL v2 dual license
+terms that allowed either of those license alternatives to be
+selected. As of February 11, 2012, the project has chosen to use only
+the BSD license option for future distribution. As such, the GPL v2
+license option is no longer used. It should be noted that the BSD
+license option (the one with advertisement clause removed) is compatible
+with GPL and as such, does not prevent use of this software in projects
+that use GPL.
+
+Some of the files may still include pointers to GPL version 2 license
+terms. However, such copyright and license notifications are maintained
+only for attribution purposes and any distribution of this software
+after February 11, 2012 is no longer under the GPL v2 option.
+
 
 ===========================================================
 Notices for file(s):
@@ -2220,6 +2235,28 @@ limitation will apply even if NSA has been advised of the possibility
 of such damage. You acknowledge that this is a reasonable allocation of
 risk.
 
+
+===========================================================
+Notices for file(s):
+./emulator-crash-service
+./qemu/darwin-x86_64/qemu-system-aarch64
+./qemu/darwin-x86_64/qemu-system-armel
+./qemu/darwin-x86_64/qemu-system-i386
+./qemu/darwin-x86_64/qemu-system-x86_64
+The notices is included for the library: Qt WebEngineWidgets
+
+===========================================================
+Licensed under the GNU LIBRARY GENERAL PUBLIC LICENSE, Version 2 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.gnu.org/licenses/lgpl-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
 ===========================================================
 Notices for file(s):
