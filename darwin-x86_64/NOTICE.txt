@@ -1256,6 +1256,10 @@ September 29, 2017
 ===========================================================
 Notices for file(s):
 ./emulator
+lib64/gles_angle/libEGL.dylib
+lib64/gles_angle/libGLESv2.dylib
+lib64/gles_angle/libabsl.dylib
+lib64/gles_angle/libchrome_zlib.dylib
 The notices is included for the library: angle-renderer
 
 ===========================================================
