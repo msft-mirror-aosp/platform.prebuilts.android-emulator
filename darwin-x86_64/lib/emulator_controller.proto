@@ -151,15 +151,9 @@ service EmulatorController {
   // A new frame will be delivered whenever the emulated device
   // requests a new audio frame. Audio is usually delivered at a rate
   // that the emulator is requesting frames. Audio will be stored in a
-  // temporary buffer that can hold 300ms of audio.
+  // temporary buffer that can hold 500ms of audio.
   //
-  // Notes:
-  //  - Only the first audio format packet that is delivered will be
-  // honored. There is no need to send the audio format multiple times.
-  //  - Real time audio currently immediately overrides the buffer. This
-  // means you must provide a constant rate of audio packets. The real
-  // time mode is experimental. Timestamps of audio packets might be
-  // used in the future to improve synchronization.
+  // Note: Currently the emulator will only accept samples between 44 - 48 khz.
   //
   // -  INVALID_ARGUMENT (code 3) The sampling rate was too high/low
   // -  INVALID_ARGUMENT (code 3) The audio packet was too large to handle.
@@ -197,14 +191,13 @@ service EmulatorController {
   //    secondary display.
   // -  INVALID_ARGUMENT (code 3) if:
   //     - The same display id is defined multiple times.
-  //     - The display configurations are outside valid ranges.
-  //       See DisplayConfiguration for details on valid ranges.
+  //     - The display configurations are outside valid ranges
+  //       (see DisplayConfiguration)
   // -  INTERNAL (code 13) if there was an internal emulator failure.
   rpc setDisplayConfigurations(DisplayConfigurations)
       returns (DisplayConfigurations) {}
 
   // Returns all currently valid logical displays.
-  //
   // The gRPC error code FAILED_PRECONDITION (code 9) is returned if the AVD
   // does not support a configurable secondary display.
   rpc getDisplayConfigurations(google.protobuf.Empty)
@@ -228,28 +221,6 @@ service EmulatorController {
           returns (google.protobuf.Empty) {}
   // Set foldable posture
   rpc setPosture(Posture) returns (google.protobuf.Empty) {}
-
-  // Get the backlight brightness.
-  // The following gRPC error codes can be returned:
-  // -  FAILED_PRECONDITION (code 9) if the AVD does not support hw-control.
-  rpc getBrightness(BrightnessValue) returns (BrightnessValue) {}
-
-  // Set the backlight brightness.
-  // The following gRPC error codes can be returned:
-  // -  FAILED_PRECONDITION (code 9) if the AVD does not support hw-control.
-  // -  INVALID_ARGUMENT (code 3) The brightness exceeds the valid range.
-  rpc setBrightness(BrightnessValue) returns (google.protobuf.Empty) {}
-
-  // Returns the current mode of the primary display of a resizable AVD.
-  // The following gRPC error codes can be returned:
-  // -  FAILED_PRECONDITION (code 9) if the AVD is not resizable.
-  rpc getDisplayMode(google.protobuf.Empty) returns (DisplayMode) {}
-
-  // Sets the size of the primary display of a resizable AVD. Fails if the AVD is
-  // not resizable.
-  // The following gRPC error codes can be returned:
-  // -  FAILED_PRECONDITION (code 9) if the AVD is not resizable.
-  rpc setDisplayMode(DisplayMode) returns (google.protobuf.Empty) {}
 }
 
 // A Run State that describes the state of the Virtual Machine.
@@ -334,27 +305,13 @@ message PhysicalModelValue {
     ROLLABLE0 = 13;
     ROLLABLE1 = 14;
     ROLLABLE2 = 15;
-
-    // Describing the device posture; the value should be an enum defined
-    // in Posture::PostureValue.
-    POSTURE = 16;
-
-    // Heart rate in bpm
-    HEART_RATE = 17;
-
-    // Ambient RGBC light intensity. Values are in order (Red, Green, Blue,
-    // Clear).
-    RGBC_LIGHT = 18;
-
-    // Wrist tilt gesture (1 = gaze, 0 = ungaze)
-    WRIST_TILT = 19;
   }
   PhysicalType target = 1;
 
   // [Output Only]
   State status = 2;
 
-  // Value interpretation depends on sensor.
+  // Value interpretation depends on sensor, will contain at most 3 values.
   ParameterValue value = 3;
 }
 
@@ -397,18 +354,6 @@ message SensorValue {
     HUMIDITY = 8;
     MAGNETIC_FIELD_UNCALIBRATED = 9;
     GYROSCOPE_UNCALIBRATED = 10;
-
-    // HINGE_ANGLE0 (11), HINGE_ANGLE1 (12), HINGE_ANGLE2 (13) are
-    // skipped; clients should use get/setPhysicalModel() instead for these
-    // "sensors".
-
-    // Measures the heart rate in bpm.
-    HEART_RATE = 14;
-    // Measures the ambient RGBC light intensity.
-    // Values are in order (Red, Green, Blue, Clear).
-    RGBC_LIGHT = 15;
-    // WIRST_TILT (16) is skipped; clients should use get/setPhysicalModel()
-    // instead.
   }
 
   // Type of sensor
@@ -417,36 +362,9 @@ message SensorValue {
   // [Output Only]
   State status = 2;
 
-  // Value interpretation depends on sensor enum.
+  // Value interpretation depends on sensor enum, will contain at most 3
+  // values.
   ParameterValue value = 3;
-}
-
-// A single backlight brightness value.
-message BrightnessValue {
-    enum LightType {
-        // Display backlight. This will affect all displays.
-        LCD = 0;
-        KEYBOARD = 1;
-        BUTTON = 2;
-    }
-
-    // Type of light
-    LightType target = 1;
-
-    // Light intensity, ranges from 0-255.
-    uint32 value = 2;
-}
-
-// in line with android/emulation/resizable_display_config.h
-enum DisplayModeValue {
-    PHONE = 0;
-    FOLDABLE = 1;
-    TABLET = 2;
-    DESKTOP = 3;
-}
-
-message DisplayMode{
-    DisplayModeValue value = 1;
 }
 
 message LogMessage {
@@ -903,9 +821,6 @@ message ImageFormat {
   // [Output Only] Display configuration when screen is folded. The value is the
   // original configuration before scaling.
   FoldedDisplay foldedDisplay = 7;
-
-  // [Output Only] Display mode when AVD is resizable.
-  DisplayModeValue displayMode = 8;
 }
 
 message Image {
@@ -1017,27 +932,12 @@ message AudioFormat {
     Stereo = 1;
   }
 
-  enum DeliveryMode {
-      // The audio queue will block and wait until the emulator requests packets.
-      // The client does not have to throttle and can push packets at will.
-      // This can result in the client falling behind.
-      MODE_UNSPECIFIED = 0;
-      // Audio packets will be delivered in real time (when possible). The audio queue
-      // will be overwritten with incoming data if data is made available.
-      // This means the client needs to control timing properly, or packets will get
-      // overwritten.
-      MODE_REAL_TIME = 1; //
-  }
   // Sampling rate to use, defaulting to 44100 if this is not set.
   // Note, that android devices typically will not use a sampling
   // rate higher than 48kHz. See https://developer.android.com/ndk/guides/audio.
   uint64 samplingRate = 1;
   Channels channels = 2;
   SampleFormat format = 3;
-
-  // [Input Only]
-  // The mode used when delivering audio packets.
-  DeliveryMode mode = 4;
 }
 
 message AudioPacket {
@@ -1152,37 +1052,12 @@ message DisplayConfiguration {
   // The primary (default) display has the display ID of 0.
   // A secondary display has a display ID not 0.
   //
-  // A display with the id in the range [1, userConfigurable]
-  // can be modified. See DisplayConfigurations below for details.
-  //
   // The id can be used to get or stream a screenshot.
   uint32 display = 5;
 }
-// Provides information about all the displays that can be attached
-// to the emulator. The emulator will always have at least one display.
-//
-// The emulator usually has the following display configurations:
-// 0:      The default display.
-// 1 - 3:  User configurable displays. These can be added/removed.
-//         For example the standalone emulator allows you to modify these
-//         in the extended controls.
-// 6 - 11: Fixed external displays. For example Android Auto uses fixed
-//         displays in this range.
+
 message DisplayConfigurations {
   repeated DisplayConfiguration displays = 1;
-
-  // Display configurations with id [1, userConfigurable] are
-  // user configurable, that is they can be added, removed or
-  // updated.
-  uint32 userConfigurable = 2;
-
-  // The maximum number of attached displays this emulator supports.
-  // This is the total number of displays that can be attached to
-  // the emulator.
-  //
-  // Note: A display with an id that is larger than userConfigurable cannot
-  // be modified.
-  uint32 maxDisplays = 3;
 }
 
 message Notification {
