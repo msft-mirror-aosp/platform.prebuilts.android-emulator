@@ -1567,6 +1567,7 @@ The notices is included for the library: None
 
 ===========================================================
 Notices for file(s):
+./emulator
 ./emulator-check
 ./emulator-crash-service
 ./nimble_bridge
@@ -1582,19 +1583,38 @@ Notices for file(s):
 ./qsn
 OpenglRender.dylib
 emugl_common.dylib
-The notices is included for the library: c-ares
+The notices is included for the library: libyuv
 
 ===========================================================
-Copyright 1998 by the Massachusetts Institute of Technology.
- 
-Permission to use, copy, modify, and distribute this software and its
-documentation for any purpose and without fee is hereby granted, provided that
-the above copyright notice appear in all copies and that both that copyright
-notice and this permission notice appear in supporting documentation, and that
-the name of M.I.T. not be used in advertising or publicity pertaining to
-distribution of the software without specific, written prior permission.
-M.I.T. makes no representations about the suitability of this software for any
-purpose.  It is provided "as is" without express or implied warranty.
+Copyright 2011 The LibYuv Project Authors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+  * Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+
+  * Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the
+    distribution.
+
+  * Neither the name of Google nor the names of its contributors may
+    be used to endorse or promote products derived from this software
+    without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 ===========================================================
@@ -1763,58 +1783,6 @@ limitations under the License.
 
 ===========================================================
 Notices for file(s):
-./emulator
-./emulator-check
-./emulator-crash-service
-./nimble_bridge
-./qemu-img
-./qemu/darwin-x86_64/qemu-system-aarch64
-./qemu/darwin-x86_64/qemu-system-aarch64-headless
-./qemu/darwin-x86_64/qemu-system-armel
-./qemu/darwin-x86_64/qemu-system-armel-headless
-./qemu/darwin-x86_64/qemu-system-i386
-./qemu/darwin-x86_64/qemu-system-i386-headless
-./qemu/darwin-x86_64/qemu-system-x86_64
-./qemu/darwin-x86_64/qemu-system-x86_64-headless
-./qsn
-OpenglRender.dylib
-emugl_common.dylib
-The notices is included for the library: libyuv
-
-===========================================================
-Copyright 2011 The LibYuv Project Authors. All rights reserved.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are
-met:
-
-  * Redistributions of source code must retain the above copyright
-    notice, this list of conditions and the following disclaimer.
-
-  * Redistributions in binary form must reproduce the above copyright
-    notice, this list of conditions and the following disclaimer in
-    the documentation and/or other materials provided with the
-    distribution.
-
-  * Neither the name of Google nor the names of its contributors may
-    be used to endorse or promote products derived from this software
-    without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-
-===========================================================
-Notices for file(s):
 ./emulator-check
 ./emulator-crash-service
 ./nimble_bridge
@@ -1955,6 +1923,38 @@ or directories: bsd-user/, linux-user/, hw/vfio/, hw/xen/xen_pt*.
 4) QEMU is a trademark of Fabrice Bellard.
 
 Fabrice Bellard and the QEMU team
+
+
+===========================================================
+Notices for file(s):
+./emulator-check
+./emulator-crash-service
+./nimble_bridge
+./qemu-img
+./qemu/darwin-x86_64/qemu-system-aarch64
+./qemu/darwin-x86_64/qemu-system-aarch64-headless
+./qemu/darwin-x86_64/qemu-system-armel
+./qemu/darwin-x86_64/qemu-system-armel-headless
+./qemu/darwin-x86_64/qemu-system-i386
+./qemu/darwin-x86_64/qemu-system-i386-headless
+./qemu/darwin-x86_64/qemu-system-x86_64
+./qemu/darwin-x86_64/qemu-system-x86_64-headless
+./qsn
+OpenglRender.dylib
+emugl_common.dylib
+The notices is included for the library: c-ares
+
+===========================================================
+Copyright 1998 by the Massachusetts Institute of Technology.
+ 
+Permission to use, copy, modify, and distribute this software and its
+documentation for any purpose and without fee is hereby granted, provided that
+the above copyright notice appear in all copies and that both that copyright
+notice and this permission notice appear in supporting documentation, and that
+the name of M.I.T. not be used in advertising or publicity pertaining to
+distribution of the software without specific, written prior permission.
+M.I.T. makes no representations about the suitability of this software for any
+purpose.  It is provided "as is" without express or implied warranty.
 
 
 ===========================================================
@@ -2167,28 +2167,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-
-===========================================================
-Notices for file(s):
-./emulator-crash-service
-./qemu/darwin-x86_64/qemu-system-aarch64
-./qemu/darwin-x86_64/qemu-system-armel
-./qemu/darwin-x86_64/qemu-system-i386
-./qemu/darwin-x86_64/qemu-system-x86_64
-The notices is included for the library: Qt WebEngineWidgets
-
-===========================================================
-Licensed under the GNU LIBRARY GENERAL PUBLIC LICENSE, Version 2 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    https://www.gnu.org/licenses/lgpl-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
 
 ===========================================================
 Notices for file(s):
@@ -2512,6 +2490,28 @@ limitation will apply even if NSA has been advised of the possibility
 of such damage. You acknowledge that this is a reasonable allocation of
 risk.
 
+
+===========================================================
+Notices for file(s):
+./emulator-crash-service
+./qemu/darwin-x86_64/qemu-system-aarch64
+./qemu/darwin-x86_64/qemu-system-armel
+./qemu/darwin-x86_64/qemu-system-i386
+./qemu/darwin-x86_64/qemu-system-x86_64
+The notices is included for the library: Qt WebEngineWidgets
+
+===========================================================
+Licensed under the GNU LIBRARY GENERAL PUBLIC LICENSE, Version 2 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.gnu.org/licenses/lgpl-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
 ===========================================================
 Notices for file(s):
@@ -2868,8 +2868,10 @@ Notices for file(s):
 ./qemu/darwin-x86_64/qemu-system-x86_64-headless
 ./qsn
 OpenglRender.dylib
+android-emu-tracing.dylib
 android-metrics.dylib
 emugl_common.dylib
+emulator-protos.dylib
 libprotobuf-lite.dylib
 libprotobuf.dylib
 The notices is included for the library: protobuf
