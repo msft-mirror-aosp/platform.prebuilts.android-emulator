@@ -30,7 +30,7 @@ linux_zip="sdk-repo-linux-emulator-$build.zip"
 mac_zip="sdk-repo-darwin-emulator-$build.zip"
 
 echo Fetching Linux $build
-/google/data/ro/projects/android/fetch_artifact --bid $build --target emulator-linux_x64 "$linux_zip"
+/google/data/ro/projects/android/fetch_artifact --bid $build --target sdk_tools_linux "$linux_zip"
 update_binaries "$linux_zip" "linux-x86_64"
 
 echo Fetching Mac $build
