@@ -198,6 +198,41 @@ limitations under the License.
 
 ===========================================================
 Notices for file(s):
+./emulator-check
+./goldfish-webrtc-bridge
+./nimble_bridge
+./qemu-img
+./qemu/linux-x86_64/qemu-system-aarch64
+./qemu/linux-x86_64/qemu-system-aarch64-headless
+./qemu/linux-x86_64/qemu-system-armel
+./qemu/linux-x86_64/qemu-system-armel-headless
+./qemu/linux-x86_64/qemu-system-i386
+./qemu/linux-x86_64/qemu-system-i386-headless
+./qemu/linux-x86_64/qemu-system-x86_64
+./qemu/linux-x86_64/qemu-system-x86_64-headless
+./qsn
+OpenglRender.so
+emugl_common.so
+The notices is included for the library: address_sorting
+
+===========================================================
+Copyright 2014 gRPC authors.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
+===========================================================
+Notices for file(s):
 ./emulator
 ./emulator-check
 ./goldfish-webrtc-bridge
@@ -305,23 +340,30 @@ Notices for file(s):
 ./qsn
 OpenglRender.so
 emugl_common.so
-The notices is included for the library: ffmpeg
+The notices is included for the library: tinyobjloader
 
 ===========================================================
+The MIT License (MIT)
 
-This software uses libraries from the FFmpeg project under the LGPLv2.1
-----
-Licensed under the GNU LIBRARY GENERAL PUBLIC LICENSE, Version 2.1 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+Copyright (c) 2012-2016 Syoyo Fujita and many contributors.
 
-    https://www.gnu.org/licenses/lgpl-2.1
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 
 
 ===========================================================
@@ -1156,41 +1198,6 @@ Notices for file(s):
 ./qsn
 OpenglRender.so
 emugl_common.so
-The notices is included for the library: address_sorting
-
-===========================================================
-Copyright 2014 gRPC authors.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
-
-===========================================================
-Notices for file(s):
-./emulator-check
-./goldfish-webrtc-bridge
-./nimble_bridge
-./qemu-img
-./qemu/linux-x86_64/qemu-system-aarch64
-./qemu/linux-x86_64/qemu-system-aarch64-headless
-./qemu/linux-x86_64/qemu-system-armel
-./qemu/linux-x86_64/qemu-system-armel-headless
-./qemu/linux-x86_64/qemu-system-i386
-./qemu/linux-x86_64/qemu-system-i386-headless
-./qemu/linux-x86_64/qemu-system-x86_64
-./qemu/linux-x86_64/qemu-system-x86_64-headless
-./qsn
-OpenglRender.so
-emugl_common.so
 The notices is included for the library: libpng
 
 ===========================================================
@@ -1331,78 +1338,6 @@ September 29, 2017
 
 ===========================================================
 Notices for file(s):
-./qemu-img
-./qemu/linux-x86_64/qemu-system-aarch64
-./qemu/linux-x86_64/qemu-system-aarch64-headless
-./qemu/linux-x86_64/qemu-system-armel
-./qemu/linux-x86_64/qemu-system-armel-headless
-./qemu/linux-x86_64/qemu-system-i386
-./qemu/linux-x86_64/qemu-system-i386-headless
-./qemu/linux-x86_64/qemu-system-x86_64
-./qemu/linux-x86_64/qemu-system-x86_64-headless
-The notices is included for the library: fdt
-
-===========================================================
-Licensing and contribution policy of dtc and libfdt
-===================================================
-
-This dtc package contains two pieces of software: dtc itself, and
-libfdt which comprises the files in the libfdt/ subdirectory.  These
-two pieces of software, although closely related, are quite distinct.
-dtc does not incorporate or rely on libfdt for its operation, nor vice
-versa.  It is important that these two pieces of software have
-different license conditions.
-
-As SPDX license tags in each source file attest, dtc is licensed
-under the GNU GPL.  The full text of the GPL can be found in the file
-entitled 'GPL' which should be included in this package.  dtc code,
-therefore, may not be incorporated into works which do not have a GPL
-compatible license.
-
-libfdt, however, is GPL/BSD dual-licensed.  That is, it may be used
-either under the terms of the GPL, or under the terms of the 2-clause
-BSD license (aka the ISC license).  The full terms of that license can
-be found are in the file entitled 'BSD-2-Clause'. This is, in
-practice, equivalent to being BSD licensed, since the terms of the BSD
-license are strictly more permissive than the GPL.
-
-I made the decision to license libfdt in this way because I want to
-encourage widespread and correct usage of flattened device trees,
-including by proprietary or otherwise GPL-incompatible firmware or
-tools.  Allowing libfdt to be used under the terms of the BSD license
-makes that it easier for vendors or authors of such software to do so.
-
-This does mean that libfdt code could be "stolen" - say, included in a
-proprietary fimware and extended without contributing those extensions
-back to the libfdt mainline.  While I hope that doesn't happen, I
-believe the goal of allowing libfdt to be widely used is more
-important than avoiding that.  libfdt is quite small, and hardly
-rocket science; so the incentive for such impolite behaviour is small,
-and the inconvenience caused thereby is not dire.
-
-Licenses such as the LGPL which would allow code to be used in non-GPL
-software, but also require contributions to be returned were
-considered.  However, libfdt is designed to be used in firmwares and
-other environments with unusual technical constraints.  It's difficult
-to anticipate all possible changes which might be needed to meld
-libfdt into such environments and so difficult to suitably word a
-license that puts the boundary between what is and isn't permitted in
-the intended place.  Again, I judged encouraging widespread use of
-libfdt by keeping the license terms simple and familiar to be the more
-important goal.
-
-**IMPORTANT** It's intended that all of libfdt as released remain
-permissively licensed this way.  Therefore only contributions which
-are released under these terms can be merged into the libfdt mainline.
-
-
-David Gibson <david@gibson.dropbear.id.au>
-(principal original author of dtc and libfdt)
-2 November 2007
-
-
-===========================================================
-Notices for file(s):
 ./emulator
 ./emulator-check
 ./goldfish-webrtc-bridge
@@ -1419,6 +1354,7 @@ Notices for file(s):
 ./qsn
 OpenglRender.so
 android-emu-agents.so
+android-emu-curl.so
 android-emu-metrics.so
 emugl_common.so
 The notices is included for the library: None
@@ -1900,6 +1836,38 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ===========================================================
 Notices for file(s):
+./emulator-check
+./goldfish-webrtc-bridge
+./nimble_bridge
+./qemu-img
+./qemu/linux-x86_64/qemu-system-aarch64
+./qemu/linux-x86_64/qemu-system-aarch64-headless
+./qemu/linux-x86_64/qemu-system-armel
+./qemu/linux-x86_64/qemu-system-armel-headless
+./qemu/linux-x86_64/qemu-system-i386
+./qemu/linux-x86_64/qemu-system-i386-headless
+./qemu/linux-x86_64/qemu-system-x86_64
+./qemu/linux-x86_64/qemu-system-x86_64-headless
+./qsn
+OpenglRender.so
+emugl_common.so
+The notices is included for the library: c-ares
+
+===========================================================
+Copyright 1998 by the Massachusetts Institute of Technology.
+ 
+Permission to use, copy, modify, and distribute this software and its
+documentation for any purpose and without fee is hereby granted, provided that
+the above copyright notice appear in all copies and that both that copyright
+notice and this permission notice appear in supporting documentation, and that
+the name of M.I.T. not be used in advertising or publicity pertaining to
+distribution of the software without specific, written prior permission.
+M.I.T. makes no representations about the suitability of this software for any
+purpose.  It is provided "as is" without express or implied warranty.
+
+
+===========================================================
+Notices for file(s):
 ./emulator
 ./emulator-check
 ./goldfish-webrtc-bridge
@@ -1951,6 +1919,41 @@ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+===========================================================
+Notices for file(s):
+./emulator-check
+./goldfish-webrtc-bridge
+./nimble_bridge
+./qemu-img
+./qemu/linux-x86_64/qemu-system-aarch64
+./qemu/linux-x86_64/qemu-system-aarch64-headless
+./qemu/linux-x86_64/qemu-system-armel
+./qemu/linux-x86_64/qemu-system-armel-headless
+./qemu/linux-x86_64/qemu-system-i386
+./qemu/linux-x86_64/qemu-system-i386-headless
+./qemu/linux-x86_64/qemu-system-x86_64
+./qemu/linux-x86_64/qemu-system-x86_64-headless
+./qsn
+OpenglRender.so
+emugl_common.so
+The notices is included for the library: gpr
+
+===========================================================
+Copyright 2014 gRPC authors.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
 
 ===========================================================
 Notices for file(s):
@@ -2910,38 +2913,6 @@ SOFTWARE.
 
 ===========================================================
 Notices for file(s):
-./emulator-check
-./goldfish-webrtc-bridge
-./nimble_bridge
-./qemu-img
-./qemu/linux-x86_64/qemu-system-aarch64
-./qemu/linux-x86_64/qemu-system-aarch64-headless
-./qemu/linux-x86_64/qemu-system-armel
-./qemu/linux-x86_64/qemu-system-armel-headless
-./qemu/linux-x86_64/qemu-system-i386
-./qemu/linux-x86_64/qemu-system-i386-headless
-./qemu/linux-x86_64/qemu-system-x86_64
-./qemu/linux-x86_64/qemu-system-x86_64-headless
-./qsn
-OpenglRender.so
-emugl_common.so
-The notices is included for the library: c-ares
-
-===========================================================
-Copyright 1998 by the Massachusetts Institute of Technology.
- 
-Permission to use, copy, modify, and distribute this software and its
-documentation for any purpose and without fee is hereby granted, provided that
-the above copyright notice appear in all copies and that both that copyright
-notice and this permission notice appear in supporting documentation, and that
-the name of M.I.T. not be used in advertising or publicity pertaining to
-distribution of the software without specific, written prior permission.
-M.I.T. makes no representations about the suitability of this software for any
-purpose.  It is provided "as is" without express or implied warranty.
-
-
-===========================================================
-Notices for file(s):
 ./emulator
 bin64/e2fsck
 bin64/fsck.ext4
@@ -3152,41 +3123,6 @@ limitations under the License.
 
 ===========================================================
 Notices for file(s):
-./emulator-check
-./goldfish-webrtc-bridge
-./nimble_bridge
-./qemu-img
-./qemu/linux-x86_64/qemu-system-aarch64
-./qemu/linux-x86_64/qemu-system-aarch64-headless
-./qemu/linux-x86_64/qemu-system-armel
-./qemu/linux-x86_64/qemu-system-armel-headless
-./qemu/linux-x86_64/qemu-system-i386
-./qemu/linux-x86_64/qemu-system-i386-headless
-./qemu/linux-x86_64/qemu-system-x86_64
-./qemu/linux-x86_64/qemu-system-x86_64-headless
-./qsn
-OpenglRender.so
-emugl_common.so
-The notices is included for the library: gpr
-
-===========================================================
-Copyright 2014 gRPC authors.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
-
-===========================================================
-Notices for file(s):
 ./emulator
 ./emulator-check
 ./goldfish-webrtc-bridge
@@ -3234,6 +3170,7 @@ THE SOFTWARE.
 
 ===========================================================
 Notices for file(s):
+./emulator
 ./emulator-check
 ./goldfish-webrtc-bridge
 ./nimble_bridge
@@ -3248,31 +3185,33 @@ Notices for file(s):
 ./qemu/linux-x86_64/qemu-system-x86_64-headless
 ./qsn
 OpenglRender.so
+android-emu-agents.so
+android-emu-curl.so
+android-emu-metrics.so
 emugl_common.so
-The notices is included for the library: tinyobjloader
+The notices is included for the library: libunwind
 
 ===========================================================
-The MIT License (MIT)
+Copyright (c) 2002 Hewlett-Packard Co.
 
-Copyright (c) 2012-2016 Syoyo Fujita and many contributors.
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 ===========================================================
@@ -3361,6 +3300,114 @@ Some of the files may still include pointers to GPL version 2 license
 terms. However, such copyright and license notifications are maintained
 only for attribution purposes and any distribution of this software
 after February 11, 2012 is no longer under the GPL v2 option.
+
+
+===========================================================
+Notices for file(s):
+./qemu-img
+./qemu/linux-x86_64/qemu-system-aarch64
+./qemu/linux-x86_64/qemu-system-aarch64-headless
+./qemu/linux-x86_64/qemu-system-armel
+./qemu/linux-x86_64/qemu-system-armel-headless
+./qemu/linux-x86_64/qemu-system-i386
+./qemu/linux-x86_64/qemu-system-i386-headless
+./qemu/linux-x86_64/qemu-system-x86_64
+./qemu/linux-x86_64/qemu-system-x86_64-headless
+The notices is included for the library: fdt
+
+===========================================================
+Licensing and contribution policy of dtc and libfdt
+===================================================
+
+This dtc package contains two pieces of software: dtc itself, and
+libfdt which comprises the files in the libfdt/ subdirectory.  These
+two pieces of software, although closely related, are quite distinct.
+dtc does not incorporate or rely on libfdt for its operation, nor vice
+versa.  It is important that these two pieces of software have
+different license conditions.
+
+As SPDX license tags in each source file attest, dtc is licensed
+under the GNU GPL.  The full text of the GPL can be found in the file
+entitled 'GPL' which should be included in this package.  dtc code,
+therefore, may not be incorporated into works which do not have a GPL
+compatible license.
+
+libfdt, however, is GPL/BSD dual-licensed.  That is, it may be used
+either under the terms of the GPL, or under the terms of the 2-clause
+BSD license (aka the ISC license).  The full terms of that license can
+be found are in the file entitled 'BSD-2-Clause'. This is, in
+practice, equivalent to being BSD licensed, since the terms of the BSD
+license are strictly more permissive than the GPL.
+
+I made the decision to license libfdt in this way because I want to
+encourage widespread and correct usage of flattened device trees,
+including by proprietary or otherwise GPL-incompatible firmware or
+tools.  Allowing libfdt to be used under the terms of the BSD license
+makes that it easier for vendors or authors of such software to do so.
+
+This does mean that libfdt code could be "stolen" - say, included in a
+proprietary fimware and extended without contributing those extensions
+back to the libfdt mainline.  While I hope that doesn't happen, I
+believe the goal of allowing libfdt to be widely used is more
+important than avoiding that.  libfdt is quite small, and hardly
+rocket science; so the incentive for such impolite behaviour is small,
+and the inconvenience caused thereby is not dire.
+
+Licenses such as the LGPL which would allow code to be used in non-GPL
+software, but also require contributions to be returned were
+considered.  However, libfdt is designed to be used in firmwares and
+other environments with unusual technical constraints.  It's difficult
+to anticipate all possible changes which might be needed to meld
+libfdt into such environments and so difficult to suitably word a
+license that puts the boundary between what is and isn't permitted in
+the intended place.  Again, I judged encouraging widespread use of
+libfdt by keeping the license terms simple and familiar to be the more
+important goal.
+
+**IMPORTANT** It's intended that all of libfdt as released remain
+permissively licensed this way.  Therefore only contributions which
+are released under these terms can be merged into the libfdt mainline.
+
+
+David Gibson <david@gibson.dropbear.id.au>
+(principal original author of dtc and libfdt)
+2 November 2007
+
+
+===========================================================
+Notices for file(s):
+./emulator-check
+./goldfish-webrtc-bridge
+./nimble_bridge
+./qemu-img
+./qemu/linux-x86_64/qemu-system-aarch64
+./qemu/linux-x86_64/qemu-system-aarch64-headless
+./qemu/linux-x86_64/qemu-system-armel
+./qemu/linux-x86_64/qemu-system-armel-headless
+./qemu/linux-x86_64/qemu-system-i386
+./qemu/linux-x86_64/qemu-system-i386-headless
+./qemu/linux-x86_64/qemu-system-x86_64
+./qemu/linux-x86_64/qemu-system-x86_64-headless
+./qsn
+OpenglRender.so
+emugl_common.so
+The notices is included for the library: ffmpeg
+
+===========================================================
+
+This software uses libraries from the FFmpeg project under the LGPLv2.1
+----
+Licensed under the GNU LIBRARY GENERAL PUBLIC LICENSE, Version 2.1 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.gnu.org/licenses/lgpl-2.1
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
 
 ===========================================================
@@ -3474,24 +3521,50 @@ POSSIBILITY OF SUCH DAMAGE.
 
 ===========================================================
 Notices for file(s):
+./emulator
+./emulator-check
+./goldfish-webrtc-bridge
+./nimble_bridge
+./qemu-img
 ./qemu/linux-x86_64/qemu-system-aarch64
+./qemu/linux-x86_64/qemu-system-aarch64-headless
 ./qemu/linux-x86_64/qemu-system-armel
+./qemu/linux-x86_64/qemu-system-armel-headless
 ./qemu/linux-x86_64/qemu-system-i386
+./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
-The notices is included for the library: Qt WebSockets
+./qemu/linux-x86_64/qemu-system-x86_64-headless
+./qsn
+OpenglRender.so
+android-emu-curl.so
+android-emu-metrics.so
+emugl_common.so
+The notices is included for the library: libcurl
 
 ===========================================================
-Licensed under the GNU LIBRARY GENERAL PUBLIC LICENSE, Version 2 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+COPYRIGHT AND PERMISSION NOTICE
 
-    https://www.gnu.org/licenses/lgpl-2.0
+Copyright (c) 1996 - 2018, Daniel Stenberg, <daniel@haxx.se>, and many
+contributors, see the THANKS file.
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+All rights reserved.
+
+Permission to use, copy, modify, and distribute this software for any purpose
+with or without fee is hereby granted, provided that the above copyright
+notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN
+NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization of the copyright holder.
+
 
 ===========================================================
 Notices for file(s):
@@ -3790,7 +3863,6 @@ android-emu-metrics.so
 android-emu-protos.so
 android-emu-tracing.so
 emugl_common.so
-libprotobuf-lite.so
 libprotobuf.so
 The notices is included for the library: protobuf
 
@@ -4178,96 +4250,24 @@ possible. They may also add themselves to the list below.
 
 ===========================================================
 Notices for file(s):
-./emulator
-./emulator-check
-./goldfish-webrtc-bridge
-./nimble_bridge
-./qemu-img
 ./qemu/linux-x86_64/qemu-system-aarch64
-./qemu/linux-x86_64/qemu-system-aarch64-headless
 ./qemu/linux-x86_64/qemu-system-armel
-./qemu/linux-x86_64/qemu-system-armel-headless
 ./qemu/linux-x86_64/qemu-system-i386
-./qemu/linux-x86_64/qemu-system-i386-headless
 ./qemu/linux-x86_64/qemu-system-x86_64
-./qemu/linux-x86_64/qemu-system-x86_64-headless
-./qsn
-OpenglRender.so
-android-emu-curl.so
-android-emu-metrics.so
-emugl_common.so
-The notices is included for the library: libcurl
+The notices is included for the library: Qt WebSockets
 
 ===========================================================
-COPYRIGHT AND PERMISSION NOTICE
+Licensed under the GNU LIBRARY GENERAL PUBLIC LICENSE, Version 2 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-Copyright (c) 1996 - 2018, Daniel Stenberg, <daniel@haxx.se>, and many
-contributors, see the THANKS file.
+    https://www.gnu.org/licenses/lgpl-2.0
 
-All rights reserved.
-
-Permission to use, copy, modify, and distribute this software for any purpose
-with or without fee is hereby granted, provided that the above copyright
-notice and this permission notice appear in all copies.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN
-NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
-OR OTHER DEALINGS IN THE SOFTWARE.
-
-Except as contained in this notice, the name of a copyright holder shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization of the copyright holder.
-
-
-===========================================================
-Notices for file(s):
-./emulator
-./emulator-check
-./goldfish-webrtc-bridge
-./nimble_bridge
-./qemu-img
-./qemu/linux-x86_64/qemu-system-aarch64
-./qemu/linux-x86_64/qemu-system-aarch64-headless
-./qemu/linux-x86_64/qemu-system-armel
-./qemu/linux-x86_64/qemu-system-armel-headless
-./qemu/linux-x86_64/qemu-system-i386
-./qemu/linux-x86_64/qemu-system-i386-headless
-./qemu/linux-x86_64/qemu-system-x86_64
-./qemu/linux-x86_64/qemu-system-x86_64-headless
-./qsn
-OpenglRender.so
-android-emu-agents.so
-android-emu-curl.so
-android-emu-metrics.so
-emugl_common.so
-The notices is included for the library: libunwind
-
-===========================================================
-Copyright (c) 2002 Hewlett-Packard Co.
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
 ===========================================================
 Notices for file(s):
