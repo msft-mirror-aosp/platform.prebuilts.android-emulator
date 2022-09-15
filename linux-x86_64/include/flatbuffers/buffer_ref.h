@@ -27,8 +27,7 @@ namespace flatbuffers {
 // A BufferRef does not own its buffer.
 struct BufferRefBase {};  // for std::is_base_of
 
-template <typename T>
-struct BufferRef : BufferRefBase {
+template<typename T> struct BufferRef : BufferRefBase {
   BufferRef() : buf(nullptr), len(0), must_free(false) {}
   BufferRef(uint8_t *_buf, uoffset_t _len)
       : buf(_buf), len(_len), must_free(false) {}

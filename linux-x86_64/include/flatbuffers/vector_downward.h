@@ -95,9 +95,7 @@ class vector_downward {
   void clear_scratch() { scratch_ = buf_; }
 
   void clear_allocator() {
-    if (own_allocator_ && allocator_) {
-      delete allocator_;
-    }
+    if (own_allocator_ && allocator_) { delete allocator_; }
     allocator_ = nullptr;
     own_allocator_ = false;
   }
@@ -136,9 +134,7 @@ class vector_downward {
 
   size_t ensure_space(size_t len) {
     FLATBUFFERS_ASSERT(cur_ >= scratch_ && scratch_ >= buf_);
-    if (len > static_cast<size_t>(cur_ - scratch_)) {
-      reallocate(len);
-    }
+    if (len > static_cast<size_t>(cur_ - scratch_)) { reallocate(len); }
     // Beyond this, signed offsets may not have enough range:
     // (FlatBuffers > 2GB not supported).
     FLATBUFFERS_ASSERT(size() < FLATBUFFERS_MAX_BUFFER_SIZE);
@@ -183,20 +179,16 @@ class vector_downward {
   uint8_t *data_at(size_t offset) const { return buf_ + reserved_ - offset; }
 
   void push(const uint8_t *bytes, size_t num) {
-    if (num > 0) {
-      memcpy(make_space(num), bytes, num);
-    }
+    if (num > 0) { memcpy(make_space(num), bytes, num); }
   }
 
   // Specialized version of push() that avoids memcpy call for small data.
-  template <typename T>
-  void push_small(const T &little_endian_t) {
+  template<typename T> void push_small(const T &little_endian_t) {
     make_space(sizeof(T));
     *reinterpret_cast<T *>(cur_) = little_endian_t;
   }
 
-  template <typename T>
-  void scratch_push_small(const T &t) {
+  template<typename T> void scratch_push_small(const T &t) {
     ensure_space(sizeof(T));
     *reinterpret_cast<T *>(scratch_) = t;
     scratch_ += sizeof(T);
