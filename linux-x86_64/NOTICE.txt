@@ -484,6 +484,7 @@ limitations under the License.
 
 ===========================================================
 Notices for file(s):
+./emulator-check
 ./nimble_bridge
 ./qemu/linux-x86_64/qemu-system-aarch64
 ./qemu/linux-x86_64/qemu-system-aarch64-headless
@@ -522,6 +523,7 @@ Fabrice Bellard and the QEMU team
 
 ===========================================================
 Notices for file(s):
+./emulator-check
 ./qemu/linux-x86_64/qemu-system-aarch64
 ./qemu/linux-x86_64/qemu-system-aarch64-headless
 ./qemu/linux-x86_64/qemu-system-armel
@@ -944,6 +946,7 @@ litigation is filed.
 
 ===========================================================
 Notices for file(s):
+./emulator-check
 ./goldfish-webrtc-bridge
 ./nimble_bridge
 ./qemu/linux-x86_64/qemu-system-aarch64
@@ -1566,6 +1569,7 @@ The notices is included for the library: None
 
 ===========================================================
 Notices for file(s):
+./emulator-check
 ./qemu/linux-x86_64/qemu-system-aarch64
 ./qemu/linux-x86_64/qemu-system-aarch64-headless
 ./qemu/linux-x86_64/qemu-system-armel
@@ -4192,6 +4196,7 @@ glslangProper
 
 ===========================================================
 Notices for file(s):
+./emulator-check
 ./qemu/linux-x86_64/qemu-system-aarch64
 ./qemu/linux-x86_64/qemu-system-aarch64-headless
 ./qemu/linux-x86_64/qemu-system-armel

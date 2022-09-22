@@ -42,32 +42,28 @@ class Table {
     return field < vtsize ? ReadScalar<voffset_t>(vtable + field) : 0;
   }
 
-  template <typename T>
-  T GetField(voffset_t field, T defaultval) const {
+  template<typename T> T GetField(voffset_t field, T defaultval) const {
     auto field_offset = GetOptionalFieldOffset(field);
     return field_offset ? ReadScalar<T>(data_ + field_offset) : defaultval;
   }
 
-  template <typename P>
-  P GetPointer(voffset_t field) {
+  template<typename P> P GetPointer(voffset_t field) {
     auto field_offset = GetOptionalFieldOffset(field);
     auto p = data_ + field_offset;
     return field_offset ? reinterpret_cast<P>(p + ReadScalar<uoffset_t>(p))
                         : nullptr;
   }
-  template <typename P>
-  P GetPointer(voffset_t field) const {
+  template<typename P> P GetPointer(voffset_t field) const {
     return const_cast<Table *>(this)->GetPointer<P>(field);
   }
 
-  template <typename P>
-  P GetStruct(voffset_t field) const {
+  template<typename P> P GetStruct(voffset_t field) const {
     auto field_offset = GetOptionalFieldOffset(field);
     auto p = const_cast<uint8_t *>(data_ + field_offset);
     return field_offset ? reinterpret_cast<P>(p) : nullptr;
   }
 
-  template <typename Raw, typename Face>
+  template<typename Raw, typename Face>
   flatbuffers::Optional<Face> GetOptional(voffset_t field) const {
     auto field_offset = GetOptionalFieldOffset(field);
     auto p = data_ + field_offset;
@@ -75,15 +71,13 @@ class Table {
                         : Optional<Face>();
   }
 
-  template <typename T>
-  bool SetField(voffset_t field, T val, T def) {
+  template<typename T> bool SetField(voffset_t field, T val, T def) {
     auto field_offset = GetOptionalFieldOffset(field);
     if (!field_offset) return IsTheSameAs(val, def);
     WriteScalar(data_ + field_offset, val);
     return true;
   }
-  template <typename T>
-  bool SetField(voffset_t field, T val) {
+  template<typename T> bool SetField(voffset_t field, T val) {
     auto field_offset = GetOptionalFieldOffset(field);
     if (!field_offset) return false;
     WriteScalar(data_ + field_offset, val);
@@ -117,7 +111,7 @@ class Table {
   }
 
   // Verify a particular field.
-  template <typename T>
+  template<typename T>
   bool VerifyField(const Verifier &verifier, voffset_t field,
                    size_t align) const {
     // Calling GetOptionalFieldOffset should be safe now thanks to
@@ -128,7 +122,7 @@ class Table {
   }
 
   // VerifyField for required fields.
-  template <typename T>
+  template<typename T>
   bool VerifyFieldRequired(const Verifier &verifier, voffset_t field,
                            size_t align) const {
     auto field_offset = GetOptionalFieldOffset(field);
@@ -160,7 +154,7 @@ class Table {
 
 // This specialization allows avoiding warnings like:
 // MSVC C4800: type: forcing value to bool 'true' or 'false'.
-template <>
+template<>
 inline flatbuffers::Optional<bool> Table::GetOptional<uint8_t, bool>(
     voffset_t field) const {
   auto field_offset = GetOptionalFieldOffset(field);
