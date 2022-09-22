@@ -43,7 +43,7 @@ class Verifier FLATBUFFERS_FINAL_CLASS {
 
   // Central location where any verification failures register.
   bool Check(const bool ok) const {
-// clang-format off
+    // clang-format off
     #ifdef FLATBUFFERS_DEBUG_VERIFICATION_FAILURE
       FLATBUFFERS_ASSERT(ok);
     #endif
@@ -57,7 +57,7 @@ class Verifier FLATBUFFERS_FINAL_CLASS {
 
   // Verify any range within the buffer.
   bool Verify(const size_t elem, const size_t elem_len) const {
-// clang-format off
+    // clang-format off
     #ifdef FLATBUFFERS_TRACK_VERIFIER_BUFFER_SIZE
       auto upper_bound = elem + elem_len;
       if (upper_bound_ < upper_bound)
@@ -72,8 +72,7 @@ class Verifier FLATBUFFERS_FINAL_CLASS {
   }
 
   // Verify a range indicated by sizeof(T).
-  template <typename T>
-  bool Verify(const size_t elem) const {
+  template<typename T> bool Verify(const size_t elem) const {
     return VerifyAlignment(elem, sizeof(T)) && Verify(elem, sizeof(T));
   }
 
@@ -88,7 +87,7 @@ class Verifier FLATBUFFERS_FINAL_CLASS {
     return VerifyAlignment(f, align) && Verify(f, elem_len);
   }
 
-  template <typename T>
+  template<typename T>
   bool VerifyField(const uint8_t *const base, const voffset_t elem_off,
                    const size_t align) const {
     const auto f = static_cast<size_t>(base - buf_) + elem_off;
@@ -96,20 +95,18 @@ class Verifier FLATBUFFERS_FINAL_CLASS {
   }
 
   // Verify a pointer (may be NULL) of a table type.
-  template <typename T>
-  bool VerifyTable(const T *const table) {
+  template<typename T> bool VerifyTable(const T *const table) {
     return !table || table->Verify(*this);
   }
 
   // Verify a pointer (may be NULL) of any vector type.
-  template <typename T>
-  bool VerifyVector(const Vector<T> *const vec) const {
+  template<typename T> bool VerifyVector(const Vector<T> *const vec) const {
     return !vec || VerifyVectorOrString(reinterpret_cast<const uint8_t *>(vec),
                                         sizeof(T));
   }
 
   // Verify a pointer (may be NULL) of a vector to struct.
-  template <typename T>
+  template<typename T>
   bool VerifyVector(const Vector<const T *> *const vec) const {
     return VerifyVector(reinterpret_cast<const Vector<T> *>(vec));
   }
@@ -151,7 +148,7 @@ class Verifier FLATBUFFERS_FINAL_CLASS {
   }
 
   // Special case for table contents, after the above has been called.
-  template <typename T>
+  template<typename T>
   bool VerifyVectorOfTables(const Vector<Offset<T>> *const vec) {
     if (vec) {
       for (uoffset_t i = 0; i < vec->size(); i++) {
@@ -179,7 +176,7 @@ class Verifier FLATBUFFERS_FINAL_CLASS {
     return Check((vsize & 1) == 0) && Verify(vtableo, vsize);
   }
 
-  template <typename T>
+  template<typename T>
   bool VerifyBufferFromStart(const char *const identifier, const size_t start) {
     // Buffers have to be of some size to be valid. The reason it is a runtime
     // check instead of static_assert, is that nested flatbuffers go through
@@ -196,7 +193,7 @@ class Verifier FLATBUFFERS_FINAL_CLASS {
     const auto o = VerifyOffset(start);
     return Check(o != 0) &&
            reinterpret_cast<const T *>(buf_ + start + o)->Verify(*this)
-// clang-format off
+    // clang-format off
     #ifdef FLATBUFFERS_TRACK_VERIFIER_BUFFER_SIZE
            && GetComputedSize()
     #endif
@@ -204,31 +201,27 @@ class Verifier FLATBUFFERS_FINAL_CLASS {
     // clang-format on
   }
 
-  template <typename T>
+  template<typename T>
   bool VerifyNestedFlatBuffer(const Vector<uint8_t> *const buf,
                               const char *const identifier) {
     // An empty buffer is OK as it indicates not present.
     if (!buf) return true;
 
     // If there is a nested buffer, it must be greater than the min size.
-    if (!Check(buf->size() >= FLATBUFFERS_MIN_BUFFER_SIZE)) return false;
+    if(!Check(buf->size() >= FLATBUFFERS_MIN_BUFFER_SIZE)) return false;
 
     Verifier nested_verifier(buf->data(), buf->size());
     return nested_verifier.VerifyBuffer<T>(identifier);
   }
 
   // Verify this whole buffer, starting with root type T.
-  template <typename T>
-  bool VerifyBuffer() {
-    return VerifyBuffer<T>(nullptr);
-  }
+  template<typename T> bool VerifyBuffer() { return VerifyBuffer<T>(nullptr); }
 
-  template <typename T>
-  bool VerifyBuffer(const char *const identifier) {
+  template<typename T> bool VerifyBuffer(const char *const identifier) {
     return VerifyBufferFromStart<T>(identifier, 0);
   }
 
-  template <typename T>
+  template<typename T>
   bool VerifySizePrefixedBuffer(const char *const identifier) {
     return Verify<uoffset_t>(0U) &&
            Check(ReadScalar<uoffset_t>(buf_) == size_ - sizeof(uoffset_t)) &&
@@ -271,7 +264,7 @@ class Verifier FLATBUFFERS_FINAL_CLASS {
 
   // Returns the message size in bytes
   size_t GetComputedSize() const {
-// clang-format off
+    // clang-format off
     #ifdef FLATBUFFERS_TRACK_VERIFIER_BUFFER_SIZE
       uintptr_t size = upper_bound_;
       // Align the size to uoffset_t

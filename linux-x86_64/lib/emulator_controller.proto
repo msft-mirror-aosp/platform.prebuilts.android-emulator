@@ -44,397 +44,399 @@ import "google/protobuf/empty.proto";
 // sendXXX   --> send a single event XXX, possibly returning state information.
 //               android usually responds to these events.
 service EmulatorController {
-  // set/get/stream the sensor data
-  rpc streamSensor(SensorValue) returns (stream SensorValue) {}
-  rpc getSensor(SensorValue) returns (SensorValue) {}
-  rpc setSensor(SensorValue) returns (google.protobuf.Empty) {}
+    // set/get/stream the sensor data
+    rpc streamSensor(SensorValue) returns (stream SensorValue) {}
+    rpc getSensor(SensorValue) returns (SensorValue) {}
+    rpc setSensor(SensorValue) returns (google.protobuf.Empty) {}
 
-  // set/get/stream the physical model, this is likely the one you are
-  // looking for when you wish to modify the device state.
-  rpc setPhysicalModel(PhysicalModelValue) returns (google.protobuf.Empty) {}
-  rpc getPhysicalModel(PhysicalModelValue) returns (PhysicalModelValue) {}
-  rpc streamPhysicalModel(PhysicalModelValue)
-      returns (stream PhysicalModelValue) {}
+    // set/get/stream the physical model, this is likely the one you are
+    // looking for when you wish to modify the device state.
+    rpc setPhysicalModel(PhysicalModelValue) returns (google.protobuf.Empty) {}
+    rpc getPhysicalModel(PhysicalModelValue) returns (PhysicalModelValue) {}
+    rpc streamPhysicalModel(PhysicalModelValue)
+            returns (stream PhysicalModelValue) {}
 
-  // Atomically set/get the current primary clipboard data.
-  rpc setClipboard(ClipData) returns (google.protobuf.Empty) {}
-  rpc getClipboard(google.protobuf.Empty) returns (ClipData) {}
+    // Atomically set/get the current primary clipboard data.
+    rpc setClipboard(ClipData) returns (google.protobuf.Empty) {}
+    rpc getClipboard(google.protobuf.Empty) returns (ClipData) {}
 
-  // Streams the current data on the clipboard. This will immediately produce
-  // a result with the current state of the clipboard after which the stream
-  // will block and wait until a new clip event is available from the guest.
-  // Calling the setClipboard method above will not result in generating a
-  // clip event. It is possible to lose clipboard events if the clipboard
-  // updates very rapidly.
-  rpc streamClipboard(google.protobuf.Empty) returns (stream ClipData) {}
+    // Streams the current data on the clipboard. This will immediately produce
+    // a result with the current state of the clipboard after which the stream
+    // will block and wait until a new clip event is available from the guest.
+    // Calling the setClipboard method above will not result in generating a
+    // clip event. It is possible to lose clipboard events if the clipboard
+    // updates very rapidly.
+    rpc streamClipboard(google.protobuf.Empty) returns (stream ClipData) {}
 
-  // Set/get the battery to the given state.
-  rpc setBattery(BatteryState) returns (google.protobuf.Empty) {}
-  rpc getBattery(google.protobuf.Empty) returns (BatteryState) {}
+    // Set/get the battery to the given state.
+    rpc setBattery(BatteryState) returns (google.protobuf.Empty) {}
+    rpc getBattery(google.protobuf.Empty) returns (BatteryState) {}
 
-  // Set the state of the gps, gps support will only work
-  // properly if:
-  //
-  // - no location ui is active. That is the emulator
-  //   is launched in headless mode (-no-window) or the location
-  //   ui is disabled (-no-location-ui).
-  // - the passiveUpdate is set to false. Setting this to false
-  //   will disable/break the LocationUI.
-  //
-  // Keep in mind that android usually only samples the gps at 1 hz.
-  rpc setGps(GpsState) returns (google.protobuf.Empty) {}
+    // Set the state of the gps, gps support will only work
+    // properly if:
+    //
+    // - no location ui is active. That is the emulator
+    //   is launched in headless mode (-no-window) or the location
+    //   ui is disabled (-no-location-ui).
+    // - the passiveUpdate is set to false. Setting this to false
+    //   will disable/break the LocationUI.
+    //
+    // Keep in mind that android usually only samples the gps at 1 hz.
+    rpc setGps(GpsState) returns (google.protobuf.Empty) {}
 
-  // Gets the latest gps state as delivered by the setGps call, or location ui
-  // if active.
-  //
-  // Note: this is not necessarily the actual gps coordinate visible at the
-  // time, due to gps sample frequency (usually 1hz).
-  rpc getGps(google.protobuf.Empty) returns (GpsState) {}
+    // Gets the latest gps state as delivered by the setGps call, or location ui
+    // if active.
+    //
+    // Note: this is not necessarily the actual gps coordinate visible at the
+    // time, due to gps sample frequency (usually 1hz).
+    rpc getGps(google.protobuf.Empty) returns (GpsState) {}
 
-  // Simulate a touch event on the finger print sensor.
-  rpc sendFingerprint(Fingerprint) returns (google.protobuf.Empty) {}
+    // Simulate a touch event on the finger print sensor.
+    rpc sendFingerprint(Fingerprint) returns (google.protobuf.Empty) {}
 
-  // Send a keyboard event. Translating the event.
-  rpc sendKey(KeyboardEvent) returns (google.protobuf.Empty) {}
+    // Send a keyboard event. Translating the event.
+    rpc sendKey(KeyboardEvent) returns (google.protobuf.Empty) {}
 
-  // Send touch/mouse events. Note that mouse events can be simulated
-  // by touch events.
-  rpc sendTouch(TouchEvent) returns (google.protobuf.Empty) {}
-  rpc sendMouse(MouseEvent) returns (google.protobuf.Empty) {}
+    // Send touch/mouse events. Note that mouse events can be simulated
+    // by touch events.
+    rpc sendTouch(TouchEvent) returns (google.protobuf.Empty) {}
+    rpc sendMouse(MouseEvent) returns (google.protobuf.Empty) {}
 
-  // Make a phone call.
-  rpc sendPhone(PhoneCall) returns (PhoneResponse) {}
+    // Make a phone call.
+    rpc sendPhone(PhoneCall) returns (PhoneResponse) {}
 
-  // Sends an sms message to the emulator.
-  rpc sendSms(SmsMessage) returns (PhoneResponse) {}
+    // Sends an sms message to the emulator.
+    rpc sendSms(SmsMessage) returns (PhoneResponse) {}
 
-  // Retrieve the status of the emulator. This will contain general
-  // hardware information, and whether the device has booted or not.
-  rpc getStatus(google.protobuf.Empty) returns (EmulatorStatus) {}
+    // Retrieve the status of the emulator. This will contain general
+    // hardware information, and whether the device has booted or not.
+    rpc getStatus(google.protobuf.Empty) returns (EmulatorStatus) {}
 
-  // Gets an individual screenshot in the desired format.
-  //
-  // The image will be scaled to the desired ImageFormat, while maintaining
-  // the aspect ratio. The returned image will never exceed resolution of the
-  // device display. Not setting the width or height (i.e. they are 0) will
-  // result in using the display width and height.
-  //
-  // The resulting image will be properly oriented and can be displayed
-  // directly without post processing. For example, if the device has a
-  // 1080x1920 screen and is in landscape mode and called with no width or
-  // height parameter, it will return a 1920x1080 image.
-  //
-  // The dimensions of the returned image will never exceed the corresponding
-  // display dimensions. For example, this method will return a 1920x1080
-  // screenshot, if the display resolution is 1080x1920 and a screenshot of
-  // 2048x2048 is requested when the device is in landscape mode.
-  //
-  // This method will return an empty image if the display is not visible.
-  rpc getScreenshot(ImageFormat) returns (Image) {}
+    // Gets an individual screenshot in the desired format.
+    //
+    // The image will be scaled to the desired ImageFormat, while maintaining
+    // the aspect ratio. The returned image will never exceed resolution of the
+    // device display. Not setting the width or height (i.e. they are 0) will
+    // result in using the display width and height.
+    //
+    // The resulting image will be properly oriented and can be displayed
+    // directly without post processing. For example, if the device has a
+    // 1080x1920 screen and is in landscape mode and called with no width or
+    // height parameter, it will return a 1920x1080 image.
+    //
+    // The dimensions of the returned image will never exceed the corresponding
+    // display dimensions. For example, this method will return a 1920x1080
+    // screenshot, if the display resolution is 1080x1920 and a screenshot of
+    // 2048x2048 is requested when the device is in landscape mode.
+    //
+    // This method will return an empty image if the display is not visible.
+    rpc getScreenshot(ImageFormat) returns (Image) {}
 
-  // Streams a series of screenshots in the desired format.
-  //
-  // A new frame will be delivered whenever the device produces a new frame.
-  // Beware that this can produce a significant amount of data and that
-  // certain translations can be very costly. For example, streaming a series
-  // of png images is very cpu intensive.
-  //
-  // Images are produced according to the getScreenshot API described above.
-  //
-  // If the display is inactive, or becomes inactive, an empty image will be
-  // delivered. Images will be delived again if the display becomes active and
-  // new frames are produced.
-  rpc streamScreenshot(ImageFormat) returns (stream Image) {}
+    // Streams a series of screenshots in the desired format.
+    //
+    // A new frame will be delivered whenever the device produces a new frame.
+    // Beware that this can produce a significant amount of data and that
+    // certain translations can be very costly. For example, streaming a series
+    // of png images is very cpu intensive.
+    //
+    // Images are produced according to the getScreenshot API described above.
+    //
+    // If the display is inactive, or becomes inactive, an empty image will be
+    // delivered. Images will be delived again if the display becomes active and
+    // new frames are produced.
+    rpc streamScreenshot(ImageFormat) returns (stream Image) {}
 
-  // Streams a series of audio packets in the desired format.
-  // A new frame will be delivered whenever the emulated device
-  // produces a new audio frame. You can expect packets to be
-  // delivered in intervals of 20-30ms.
-  //
-  // Be aware that this can block when the emulator does not
-  // produce any audio whatsoever!
-  rpc streamAudio(AudioFormat) returns (stream AudioPacket) {}
+    // Streams a series of audio packets in the desired format.
+    // A new frame will be delivered whenever the emulated device
+    // produces a new audio frame. You can expect packets to be
+    // delivered in intervals of 20-30ms.
+    //
+    // Be aware that this can block when the emulator does not
+    // produce any audio whatsoever!
+    rpc streamAudio(AudioFormat) returns (stream AudioPacket) {}
 
-  // Injects a series of audio packets to the android microphone.
-  // A new frame will be delivered whenever the emulated device
-  // requests a new audio frame. Audio is usually delivered at a rate
-  // that the emulator is requesting frames. Audio will be stored in a
-  // temporary buffer that can hold 300ms of audio.
-  //
-  // Notes:
-  //  - Only the first audio format packet that is delivered will be
-  // honored. There is no need to send the audio format multiple times.
-  //  - Real time audio currently immediately overrides the buffer. This
-  // means you must provide a constant rate of audio packets. The real
-  // time mode is experimental. Timestamps of audio packets might be
-  // used in the future to improve synchronization.
-  //
-  // -  INVALID_ARGUMENT (code 3) The sampling rate was too high/low
-  // -  INVALID_ARGUMENT (code 3) The audio packet was too large to handle.
-  // -  FAILED_PRECONDITION (code 9) If there was a microphone registered
-  // already.
-  rpc injectAudio(stream AudioPacket) returns (google.protobuf.Empty) {}
+    // Injects a series of audio packets to the android microphone.
+    // A new frame will be delivered whenever the emulated device
+    // requests a new audio frame. Audio is usually delivered at a rate
+    // that the emulator is requesting frames. Audio will be stored in a
+    // temporary buffer that can hold 300ms of audio.
+    //
+    // Notes:
+    //  - Only the first audio format packet that is delivered will be
+    // honored. There is no need to send the audio format multiple times.
+    //  - Real time audio currently immediately overrides the buffer. This
+    // means you must provide a constant rate of audio packets. The real
+    // time mode is experimental. Timestamps of audio packets might be
+    // used in the future to improve synchronization.
+    //
+    // -  INVALID_ARGUMENT (code 3) The sampling rate was too high/low
+    // -  INVALID_ARGUMENT (code 3) The audio packet was too large to handle.
+    // -  FAILED_PRECONDITION (code 9) If there was a microphone registered
+    // already.
+    rpc injectAudio(stream AudioPacket) returns (google.protobuf.Empty) {}
 
-  // Returns the last 128Kb of logcat output from the emulator
-  // Note that parsed logcat messages are only available after L (Api >23).
-  // it is possible that the logcat buffer gets overwritten, or falls behind.
-  rpc getLogcat(LogMessage) returns (LogMessage) {}
+    // Returns the last 128Kb of logcat output from the emulator
+    // Note that parsed logcat messages are only available after L (Api >23).
+    // it is possible that the logcat buffer gets overwritten, or falls behind.
+    rpc getLogcat(LogMessage) returns (LogMessage) {}
 
-  // Streams the logcat output from the emulator. The first call
-  // can retrieve up to 128Kb. This call will not return.
-  // Note that parsed logcat messages are only available after L (Api >23)
-  // it is possible that the logcat buffer gets overwritten, or falls behind.
-  rpc streamLogcat(LogMessage) returns (stream LogMessage) {}
+    // Streams the logcat output from the emulator. The first call
+    // can retrieve up to 128Kb. This call will not return.
+    // Note that parsed logcat messages are only available after L (Api >23)
+    // it is possible that the logcat buffer gets overwritten, or falls behind.
+    rpc streamLogcat(LogMessage) returns (stream LogMessage) {}
 
-  // Transition the virtual machine to the desired state. Note that
-  // some states are only observable. For example you cannot transition
-  // to the error state.
-  rpc setVmState(VmRunState) returns (google.protobuf.Empty) {}
+    // Transition the virtual machine to the desired state. Note that
+    // some states are only observable. For example you cannot transition
+    // to the error state.
+    rpc setVmState(VmRunState) returns (google.protobuf.Empty) {}
 
-  // Gets the state of the virtual machine.
-  rpc getVmState(google.protobuf.Empty) returns (VmRunState) {}
+    // Gets the state of the virtual machine.
+    rpc getVmState(google.protobuf.Empty) returns (VmRunState) {}
 
-  // Atomically changes the current multi-display configuration.
-  // After this call the given display configurations will be activated. You
-  // can only update secondary displays. Displays with id 0 will be ignored.
-  //
-  // This call can result in the removal or addition of secondary displays,
-  // the final display state can be observed by the returned configuration.
-  //
-  // The following gRPC error codes can be returned:
-  // -  FAILED_PRECONDITION (code 9) if the AVD does not support a
-  // configurable
-  //    secondary display.
-  // -  INVALID_ARGUMENT (code 3) if:
-  //     - The same display id is defined multiple times.
-  //     - The display configurations are outside valid ranges.
-  //       See DisplayConfiguration for details on valid ranges.
-  // -  INTERNAL (code 13) if there was an internal emulator failure.
-  rpc setDisplayConfigurations(DisplayConfigurations)
-      returns (DisplayConfigurations) {}
+    // Atomically changes the current multi-display configuration.
+    // After this call the given display configurations will be activated. You
+    // can only update secondary displays. Displays with id 0 will be ignored.
+    //
+    // This call can result in the removal or addition of secondary displays,
+    // the final display state can be observed by the returned configuration.
+    //
+    // The following gRPC error codes can be returned:
+    // -  FAILED_PRECONDITION (code 9) if the AVD does not support a
+    // configurable
+    //    secondary display.
+    // -  INVALID_ARGUMENT (code 3) if:
+    //     - The same display id is defined multiple times.
+    //     - The display configurations are outside valid ranges.
+    //       See DisplayConfiguration for details on valid ranges.
+    // -  INTERNAL (code 13) if there was an internal emulator failure.
+    rpc setDisplayConfigurations(DisplayConfigurations)
+            returns (DisplayConfigurations) {}
 
-  // Returns all currently valid logical displays.
-  //
-  // The gRPC error code FAILED_PRECONDITION (code 9) is returned if the AVD
-  // does not support a configurable secondary display.
-  rpc getDisplayConfigurations(google.protobuf.Empty)
-      returns (DisplayConfigurations) {}
+    // Returns all currently valid logical displays.
+    //
+    // The gRPC error code FAILED_PRECONDITION (code 9) is returned if the AVD
+    // does not support a configurable secondary display.
+    rpc getDisplayConfigurations(google.protobuf.Empty)
+            returns (DisplayConfigurations) {}
 
-  // Notifies client of the following changes:
-  //
-  // - Virtual scene camera status change.
-  // - Display configuration changes from extended ui. This will only be fired
-  //   if the user makes modifications the extended displays through the
-  //   extended control tab.
-  //
-  // Note that this method will send the initial virtual scene state
-  // immediately.
-  rpc streamNotification(google.protobuf.Empty) returns (stream Notification) {}
+    // Notifies client of the following changes:
+    //
+    // - Virtual scene camera status change.
+    // - Display configuration changes from extended ui. This will only be fired
+    //   if the user makes modifications the extended displays through the
+    //   extended control tab.
+    //
+    // Note that this method will send the initial virtual scene state
+    // immediately.
+    rpc streamNotification(google.protobuf.Empty)
+            returns (stream Notification) {}
 
-  // RotationRadian is relative to the camera's current orientation.
-  rpc rotateVirtualSceneCamera(RotationRadian) returns (google.protobuf.Empty) {
-  }
-  // Velocity is absolute
-  rpc setVirtualSceneCameraVelocity(Velocity) returns (google.protobuf.Empty) {}
-  // Set foldable posture
-  rpc setPosture(Posture) returns (google.protobuf.Empty) {}
+    // RotationRadian is relative to the camera's current orientation.
+    rpc rotateVirtualSceneCamera(RotationRadian)
+            returns (google.protobuf.Empty) {}
+    // Velocity is absolute
+    rpc setVirtualSceneCameraVelocity(Velocity)
+            returns (google.protobuf.Empty) {}
+    // Set foldable posture
+    rpc setPosture(Posture) returns (google.protobuf.Empty) {}
 
-  // Get the backlight brightness.
-  // The following gRPC error codes can be returned:
-  // -  FAILED_PRECONDITION (code 9) if the AVD does not support hw-control.
-  rpc getBrightness(BrightnessValue) returns (BrightnessValue) {}
+    // Get the backlight brightness.
+    // The following gRPC error codes can be returned:
+    // -  FAILED_PRECONDITION (code 9) if the AVD does not support hw-control.
+    rpc getBrightness(BrightnessValue) returns (BrightnessValue) {}
 
-  // Set the backlight brightness.
-  // The following gRPC error codes can be returned:
-  // -  FAILED_PRECONDITION (code 9) if the AVD does not support hw-control.
-  // -  INVALID_ARGUMENT (code 3) The brightness exceeds the valid range.
-  rpc setBrightness(BrightnessValue) returns (google.protobuf.Empty) {}
+    // Set the backlight brightness.
+    // The following gRPC error codes can be returned:
+    // -  FAILED_PRECONDITION (code 9) if the AVD does not support hw-control.
+    // -  INVALID_ARGUMENT (code 3) The brightness exceeds the valid range.
+    rpc setBrightness(BrightnessValue) returns (google.protobuf.Empty) {}
 
-  // Returns the current mode of the primary display of a resizable AVD.
-  // The following gRPC error codes can be returned:
-  // -  FAILED_PRECONDITION (code 9) if the AVD is not resizable.
-  rpc getDisplayMode(google.protobuf.Empty) returns (DisplayMode) {}
+    // Returns the current mode of the primary display of a resizable AVD.
+    // The following gRPC error codes can be returned:
+    // -  FAILED_PRECONDITION (code 9) if the AVD is not resizable.
+    rpc getDisplayMode(google.protobuf.Empty) returns (DisplayMode) {}
 
-  // Sets the size of the primary display of a resizable AVD. Fails if the AVD
-  // is not resizable. The following gRPC error codes can be returned:
-  // -  FAILED_PRECONDITION (code 9) if the AVD is not resizable.
-  rpc setDisplayMode(DisplayMode) returns (google.protobuf.Empty) {}
+    // Sets the size of the primary display of a resizable AVD. Fails if the AVD
+    // is not resizable. The following gRPC error codes can be returned:
+    // -  FAILED_PRECONDITION (code 9) if the AVD is not resizable.
+    rpc setDisplayMode(DisplayMode) returns (google.protobuf.Empty) {}
 }
 
 // A Run State that describes the state of the Virtual Machine.
 message VmRunState {
-  enum RunState {
-    // The emulator is in an unknown state. You cannot transition to this
-    // state.
-    UNKNOWN = 0;
-    // Guest is actively running. You can transition to this state from the
-    // paused state.
-    RUNNING = 1;
-    // Guest is paused to load a snapshot. You cannot transition to this
-    // state.
-    RESTORE_VM = 2;
-    // Guest has been paused. Transitioning to this state will pause the
-    // emulator the guest will not be consuming any cpu cycles.
-    PAUSED = 3;
-    // Guest is paused to take or export a snapshot. You cannot
-    // transition to this state.
-    SAVE_VM = 4;
-    // System shutdown, note that it is similar to power off. It tries to
-    // set the system status and notify guest. The system is likely going to
-    // disappear soon and do proper cleanup of resources, possibly taking
-    // a snapshot. This is the same behavior as closing the emulator by
-    // clicking the X (close) in the user interface.
-    SHUTDOWN = 5;
-    // Immediately terminate the emulator. No resource cleanup will take
-    // place. There is a good change to corrupt the system.
-    TERMINATE = 7;
-    // Will cause the emulator to reset. This is not a state you can
-    // observe.
-    RESET = 9;
-    // Guest experienced some error state, you cannot transition to this
-    // state.
-    INTERNAL_ERROR = 10;
-  }
+    enum RunState {
+        // The emulator is in an unknown state. You cannot transition to this
+        // state.
+        UNKNOWN = 0;
+        // Guest is actively running. You can transition to this state from the
+        // paused state.
+        RUNNING = 1;
+        // Guest is paused to load a snapshot. You cannot transition to this
+        // state.
+        RESTORE_VM = 2;
+        // Guest has been paused. Transitioning to this state will pause the
+        // emulator the guest will not be consuming any cpu cycles.
+        PAUSED = 3;
+        // Guest is paused to take or export a snapshot. You cannot
+        // transition to this state.
+        SAVE_VM = 4;
+        // System shutdown, note that it is similar to power off. It tries to
+        // set the system status and notify guest. The system is likely going to
+        // disappear soon and do proper cleanup of resources, possibly taking
+        // a snapshot. This is the same behavior as closing the emulator by
+        // clicking the X (close) in the user interface.
+        SHUTDOWN = 5;
+        // Immediately terminate the emulator. No resource cleanup will take
+        // place. There is a good change to corrupt the system.
+        TERMINATE = 7;
+        // Will cause the emulator to reset. This is not a state you can
+        // observe.
+        RESET = 9;
+        // Guest experienced some error state, you cannot transition to this
+        // state.
+        INTERNAL_ERROR = 10;
+    }
 
-  RunState state = 1;
+    RunState state = 1;
 }
 
 message ParameterValue {
-  repeated float data = 1 [packed = true];
+    repeated float data = 1 [packed = true];
 }
 
 message PhysicalModelValue {
-  enum State {
-    OK = 0;
-    NO_SERVICE = -3;  // qemud service is not available/initiated.
-    DISABLED = -2;    // Sensor is disabled.
-    UNKNOWN = -1;     // Unknown sensor (should not happen)
-  }
+    enum State {
+        OK = 0;
+        NO_SERVICE = -3;  // qemud service is not available/initiated.
+        DISABLED = -2;    // Sensor is disabled.
+        UNKNOWN = -1;     // Unknown sensor (should not happen)
+    }
 
-  // Details on the sensors documentation can be found here:
-  // https://developer.android.com/reference/android/hardware/Sensor.html#TYPE_
-  // The types must follow the order defined in
-  // "external/qemu/android/hw-sensors.h"
-  enum PhysicalType {
-    POSITION = 0;
+    // Details on the sensors documentation can be found here:
+    // https://developer.android.com/reference/android/hardware/Sensor.html#TYPE_
+    // The types must follow the order defined in
+    // "external/qemu/android/hw-sensors.h"
+    enum PhysicalType {
+        POSITION = 0;
 
-    // All values are angles in degrees.
-    // values = [x,y,z]
-    ROTATION = 1;
+        // All values are angles in degrees.
+        // values = [x,y,z]
+        ROTATION = 1;
 
-    MAGNETIC_FIELD = 2;
+        MAGNETIC_FIELD = 2;
 
-    // Temperature in °C
-    TEMPERATURE = 3;
+        // Temperature in °C
+        TEMPERATURE = 3;
 
-    // Proximity sensor distance measured in centimeters
-    PROXIMITY = 4;
+        // Proximity sensor distance measured in centimeters
+        PROXIMITY = 4;
 
-    // Ambient light level in SI lux units
-    LIGHT = 5;
+        // Ambient light level in SI lux units
+        LIGHT = 5;
 
-    // Atmospheric pressure in hPa (millibar)
-    PRESSURE = 6;
+        // Atmospheric pressure in hPa (millibar)
+        PRESSURE = 6;
 
-    // Relative ambient air humidity in percent
-    HUMIDITY = 7;
+        // Relative ambient air humidity in percent
+        HUMIDITY = 7;
 
-    VELOCITY = 8;
-    AMBIENT_MOTION = 9;
+        VELOCITY = 8;
+        AMBIENT_MOTION = 9;
 
-    // Describing a hinge angle sensor in degrees.
-    HINGE_ANGLE0 = 10;
-    HINGE_ANGLE1 = 11;
-    HINGE_ANGLE2 = 12;
+        // Describing a hinge angle sensor in degrees.
+        HINGE_ANGLE0 = 10;
+        HINGE_ANGLE1 = 11;
+        HINGE_ANGLE2 = 12;
 
-    ROLLABLE0 = 13;
-    ROLLABLE1 = 14;
-    ROLLABLE2 = 15;
+        ROLLABLE0 = 13;
+        ROLLABLE1 = 14;
+        ROLLABLE2 = 15;
 
-    // Describing the device posture; the value should be an enum defined
-    // in Posture::PostureValue.
-    POSTURE = 16;
+        // Describing the device posture; the value should be an enum defined
+        // in Posture::PostureValue.
+        POSTURE = 16;
 
-    // Heart rate in bpm
-    HEART_RATE = 17;
+        // Heart rate in bpm
+        HEART_RATE = 17;
 
-    // Ambient RGBC light intensity. Values are in order (Red, Green, Blue,
-    // Clear).
-    RGBC_LIGHT = 18;
+        // Ambient RGBC light intensity. Values are in order (Red, Green, Blue,
+        // Clear).
+        RGBC_LIGHT = 18;
 
-    // Wrist tilt gesture (1 = gaze, 0 = ungaze)
-    WRIST_TILT = 19;
-  }
-  PhysicalType target = 1;
+        // Wrist tilt gesture (1 = gaze, 0 = ungaze)
+        WRIST_TILT = 19;
+    }
+    PhysicalType target = 1;
 
-  // [Output Only]
-  State status = 2;
+    // [Output Only]
+    State status = 2;
 
-  // Value interpretation depends on sensor.
-  ParameterValue value = 3;
+    // Value interpretation depends on sensor.
+    ParameterValue value = 3;
 }
 
 // A single sensor value.
 message SensorValue {
-  enum State {
-    OK = 0;
-    NO_SERVICE = -3;  // qemud service is not available/initiated.
-    DISABLED = -2;    // Sensor is disabled.
-    UNKNOWN = -1;     // Unknown sensor (should not happen)
-  }
+    enum State {
+        OK = 0;
+        NO_SERVICE = -3;  // qemud service is not available/initiated.
+        DISABLED = -2;    // Sensor is disabled.
+        UNKNOWN = -1;     // Unknown sensor (should not happen)
+    }
 
-  // These are the various sensors that can be available in an emulated
-  // devices.
-  enum SensorType {
-    // Measures the acceleration force in m/s2 that is applied to a device
-    // on all three physical axes (x, y, and z), including the force of
-    // gravity.
-    ACCELERATION = 0;
-    // Measures a device's rate of rotation in rad/s around each of the
-    // three physical axes (x, y, and z).
-    GYROSCOPE = 1;
-    // Measures the ambient geomagnetic field for all three physical axes
-    // (x, y, z) in μT.
-    MAGNETIC_FIELD = 2;
-    // Measures degrees of rotation that a device makes around all three
-    // physical axes (x, y, z)
-    ORIENTATION = 3;
-    // Measures the temperature of the device in degrees Celsius (°C).
-    TEMPERATURE = 4;
-    // Measures the proximity of an object in cm relative to the view screen
-    // of a device. This sensor is typically used to determine whether a
-    // handset is being held up to a person's ear.
-    PROXIMITY = 5;
-    // Measures the ambient light level (illumination) in lx.
-    LIGHT = 6;
-    // Measures the ambient air pressure in hPa or mbar.
-    PRESSURE = 7;
-    // Measures the relative ambient humidity in percent (%).
-    HUMIDITY = 8;
-    MAGNETIC_FIELD_UNCALIBRATED = 9;
-    GYROSCOPE_UNCALIBRATED = 10;
+    // These are the various sensors that can be available in an emulated
+    // devices.
+    enum SensorType {
+        // Measures the acceleration force in m/s2 that is applied to a device
+        // on all three physical axes (x, y, and z), including the force of
+        // gravity.
+        ACCELERATION = 0;
+        // Measures a device's rate of rotation in rad/s around each of the
+        // three physical axes (x, y, and z).
+        GYROSCOPE = 1;
+        // Measures the ambient geomagnetic field for all three physical axes
+        // (x, y, z) in μT.
+        MAGNETIC_FIELD = 2;
+        // Measures degrees of rotation that a device makes around all three
+        // physical axes (x, y, z)
+        ORIENTATION = 3;
+        // Measures the temperature of the device in degrees Celsius (°C).
+        TEMPERATURE = 4;
+        // Measures the proximity of an object in cm relative to the view screen
+        // of a device. This sensor is typically used to determine whether a
+        // handset is being held up to a person's ear.
+        PROXIMITY = 5;
+        // Measures the ambient light level (illumination) in lx.
+        LIGHT = 6;
+        // Measures the ambient air pressure in hPa or mbar.
+        PRESSURE = 7;
+        // Measures the relative ambient humidity in percent (%).
+        HUMIDITY = 8;
+        MAGNETIC_FIELD_UNCALIBRATED = 9;
+        GYROSCOPE_UNCALIBRATED = 10;
 
-    // HINGE_ANGLE0 (11), HINGE_ANGLE1 (12), HINGE_ANGLE2 (13) are
-    // skipped; clients should use get/setPhysicalModel() instead for these
-    // "sensors".
+        // HINGE_ANGLE0 (11), HINGE_ANGLE1 (12), HINGE_ANGLE2 (13) are
+        // skipped; clients should use get/setPhysicalModel() instead for these
+        // "sensors".
 
-    // Measures the heart rate in bpm.
-    HEART_RATE = 14;
-    // Measures the ambient RGBC light intensity.
-    // Values are in order (Red, Green, Blue, Clear).
-    RGBC_LIGHT = 15;
-    // WIRST_TILT (16) is skipped; clients should use get/setPhysicalModel()
-    // instead.
-  }
+        // Measures the heart rate in bpm.
+        HEART_RATE = 14;
+        // Measures the ambient RGBC light intensity.
+        // Values are in order (Red, Green, Blue, Clear).
+        RGBC_LIGHT = 15;
+        // WIRST_TILT (16) is skipped; clients should use get/setPhysicalModel()
+        // instead.
+    }
 
-  // Type of sensor
-  SensorType target = 1;
+    // Type of sensor
+    SensorType target = 1;
 
-  // [Output Only]
-  State status = 2;
+    // [Output Only]
+    State status = 2;
 
-  // Value interpretation depends on sensor enum.
-  ParameterValue value = 3;
+    // Value interpretation depends on sensor enum.
+    ParameterValue value = 3;
 }
 
 // A single backlight brightness value.

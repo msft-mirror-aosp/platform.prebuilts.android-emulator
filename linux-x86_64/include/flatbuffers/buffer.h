@@ -23,8 +23,7 @@ namespace flatbuffers {
 
 // Wrapper for uoffset_t to allow safe template specialization.
 // Value is allowed to be 0 to indicate a null object (see e.g. AddOffset).
-template <typename T>
-struct Offset {
+template<typename T> struct Offset {
   uoffset_t o;
   Offset() : o(0) {}
   Offset(uoffset_t _o) : o(_o) {}
@@ -40,9 +39,8 @@ inline void EndianCheck() {
   (void)endiantest;
 }
 
-template <typename T>
-FLATBUFFERS_CONSTEXPR size_t AlignOf() {
-// clang-format off
+template<typename T> FLATBUFFERS_CONSTEXPR size_t AlignOf() {
+  // clang-format off
   #ifdef _MSC_VER
     return __alignof(T);
   #else
@@ -71,8 +69,7 @@ static inline bool StringLessThan(const char *a_data, uoffset_t a_size,
 // return type like this.
 // The typedef is for the convenience of callers of this function
 // (avoiding the need for a trailing return decltype)
-template <typename T>
-struct IndirectHelper {
+template<typename T> struct IndirectHelper {
   typedef T return_type;
   typedef T mutable_return_type;
   static const size_t element_stride = sizeof(T);
@@ -80,8 +77,7 @@ struct IndirectHelper {
     return EndianScalar((reinterpret_cast<const T *>(p))[i]);
   }
 };
-template <typename T>
-struct IndirectHelper<Offset<T>> {
+template<typename T> struct IndirectHelper<Offset<T>> {
   typedef const T *return_type;
   typedef T *mutable_return_type;
   static const size_t element_stride = sizeof(uoffset_t);
@@ -90,8 +86,7 @@ struct IndirectHelper<Offset<T>> {
     return reinterpret_cast<return_type>(p + ReadScalar<uoffset_t>(p));
   }
 };
-template <typename T>
-struct IndirectHelper<const T *> {
+template<typename T> struct IndirectHelper<const T *> {
   typedef const T *return_type;
   typedef T *mutable_return_type;
   static const size_t element_stride = sizeof(T);
@@ -122,27 +117,23 @@ inline bool BufferHasIdentifier(const void *buf, const char *identifier,
 
 /// @cond FLATBUFFERS_INTERNAL
 // Helpers to get a typed pointer to the root object contained in the buffer.
-template <typename T>
-T *GetMutableRoot(void *buf) {
+template<typename T> T *GetMutableRoot(void *buf) {
   EndianCheck();
   return reinterpret_cast<T *>(
       reinterpret_cast<uint8_t *>(buf) +
       EndianScalar(*reinterpret_cast<uoffset_t *>(buf)));
 }
 
-template <typename T>
-T *GetMutableSizePrefixedRoot(void *buf) {
+template<typename T> T *GetMutableSizePrefixedRoot(void *buf) {
   return GetMutableRoot<T>(reinterpret_cast<uint8_t *>(buf) +
                            sizeof(uoffset_t));
 }
 
-template <typename T>
-const T *GetRoot(const void *buf) {
+template<typename T> const T *GetRoot(const void *buf) {
   return GetMutableRoot<T>(const_cast<void *>(buf));
 }
 
-template <typename T>
-const T *GetSizePrefixedRoot(const void *buf) {
+template<typename T> const T *GetSizePrefixedRoot(const void *buf) {
   return GetRoot<T>(reinterpret_cast<const uint8_t *>(buf) + sizeof(uoffset_t));
 }
 

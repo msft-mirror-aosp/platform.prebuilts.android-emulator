@@ -869,9 +869,7 @@ inline Reference Map::operator[](const char *key) const {
     case 2: comp = KeyCompare<uint16_t>; break;
     case 4: comp = KeyCompare<uint32_t>; break;
     case 8: comp = KeyCompare<uint64_t>; break;
-    default:
-      FLATBUFFERS_ASSERT(false);
-      return Reference();
+    default: FLATBUFFERS_ASSERT(false); return Reference();
   }
   auto res = std::bsearch(key, keys.data_, keys.size(), keys.byte_width_, comp);
   if (!res) return Reference(nullptr, 1, NullPackedType());
@@ -1682,7 +1680,7 @@ class Verifier FLATBUFFERS_FINAL_CLASS {
  private:
   // Central location where any verification failures register.
   bool Check(bool ok) const {
-// clang-format off
+    // clang-format off
     #ifdef FLATBUFFERS_DEBUG_VERIFICATION_FAILURE
       FLATBUFFERS_ASSERT(ok);
     #endif
@@ -1817,28 +1815,20 @@ class Verifier FLATBUFFERS_FINAL_CLASS {
     switch (r.type_) {
       case FBT_INDIRECT_INT:
       case FBT_INDIRECT_UINT:
-      case FBT_INDIRECT_FLOAT:
-        return VerifyFromPointer(p, r.byte_width_);
-      case FBT_KEY:
-        return VerifyKey(p);
+      case FBT_INDIRECT_FLOAT: return VerifyFromPointer(p, r.byte_width_);
+      case FBT_KEY: return VerifyKey(p);
       case FBT_MAP:
         return VerifyVector(r, p, FBT_NULL) && VerifyKeys(p, r.byte_width_);
-      case FBT_VECTOR:
-        return VerifyVector(r, p, FBT_NULL);
-      case FBT_VECTOR_INT:
-        return VerifyVector(r, p, FBT_INT);
+      case FBT_VECTOR: return VerifyVector(r, p, FBT_NULL);
+      case FBT_VECTOR_INT: return VerifyVector(r, p, FBT_INT);
       case FBT_VECTOR_BOOL:
-      case FBT_VECTOR_UINT:
-        return VerifyVector(r, p, FBT_UINT);
-      case FBT_VECTOR_FLOAT:
-        return VerifyVector(r, p, FBT_FLOAT);
-      case FBT_VECTOR_KEY:
-        return VerifyVector(r, p, FBT_KEY);
+      case FBT_VECTOR_UINT: return VerifyVector(r, p, FBT_UINT);
+      case FBT_VECTOR_FLOAT: return VerifyVector(r, p, FBT_FLOAT);
+      case FBT_VECTOR_KEY: return VerifyVector(r, p, FBT_KEY);
       case FBT_VECTOR_STRING_DEPRECATED:
         // Use of FBT_KEY here intentional, see elsewhere.
         return VerifyVector(r, p, FBT_KEY);
-      case FBT_BLOB:
-        return VerifyVector(r, p, FBT_UINT);
+      case FBT_BLOB: return VerifyVector(r, p, FBT_UINT);
       case FBT_STRING:
         return VerifyVector(r, p, FBT_UINT) &&
                VerifyTerminator(String(p, r.byte_width_));
@@ -1856,8 +1846,7 @@ class Verifier FLATBUFFERS_FINAL_CLASS {
         if (!VerifyType(vtype)) return false;
         return VerifyFromPointer(p, r.byte_width_ * len);
       }
-      default:
-        return false;
+      default: return false;
     }
   }
 
