@@ -95,9 +95,7 @@ class DetachedBuffer {
 
   inline void destroy() {
     if (buf_) Deallocate(allocator_, buf_, reserved_);
-    if (own_allocator_ && allocator_) {
-      delete allocator_;
-    }
+    if (own_allocator_ && allocator_) { delete allocator_; }
     reset();
   }
 
