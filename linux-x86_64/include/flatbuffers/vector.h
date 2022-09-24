@@ -27,8 +27,7 @@ struct String;
 
 // An STL compatible iterator implementation for Vector below, effectively
 // calling Get() for every element.
-template <typename T, typename IT>
-struct VectorIterator {
+template<typename T, typename IT> struct VectorIterator {
   typedef std::random_access_iterator_tag iterator_category;
   typedef IT value_type;
   typedef ptrdiff_t difference_type;
@@ -120,7 +119,7 @@ struct VectorIterator {
   const uint8_t *data_;
 };
 
-template <typename Iterator>
+template<typename Iterator>
 struct VectorReverseIterator : public std::reverse_iterator<Iterator> {
   explicit VectorReverseIterator(Iterator iter)
       : std::reverse_iterator<Iterator>(iter) {}
@@ -142,8 +141,7 @@ struct VectorReverseIterator : public std::reverse_iterator<Iterator> {
 
 // This is used as a helper type for accessing vectors.
 // Vector::data() assumes the vector elements start after the length field.
-template <typename T>
-class Vector {
+template<typename T> class Vector {
  public:
   typedef VectorIterator<T, typename IndirectHelper<T>::mutable_return_type>
       iterator;
@@ -178,15 +176,13 @@ class Vector {
   // If this is a Vector of enums, T will be its storage type, not the enum
   // type. This function makes it convenient to retrieve value with enum
   // type E.
-  template <typename E>
-  E GetEnum(uoffset_t i) const {
+  template<typename E> E GetEnum(uoffset_t i) const {
     return static_cast<E>(Get(i));
   }
 
   // If this a vector of unions, this does the cast for you. There's no check
   // to make sure this is the right type!
-  template <typename U>
-  const U *GetAs(uoffset_t i) const {
+  template<typename U> const U *GetAs(uoffset_t i) const {
     return reinterpret_cast<const U *>(Get(i));
   }
 
@@ -258,8 +254,7 @@ class Vector {
   const T *data() const { return reinterpret_cast<const T *>(Data()); }
   T *data() { return reinterpret_cast<T *>(Data()); }
 
-  template <typename K>
-  return_type LookupByKey(K key) const {
+  template<typename K> return_type LookupByKey(K key) const {
     void *search_result = std::bsearch(
         &key, Data(), size(), IndirectHelper<T>::element_stride, KeyCompare<K>);
 
@@ -272,8 +267,7 @@ class Vector {
     return IndirectHelper<T>::Read(element, 0);
   }
 
-  template <typename K>
-  mutable_return_type MutableLookupByKey(K key) {
+  template<typename K> mutable_return_type MutableLookupByKey(K key) {
     return const_cast<mutable_return_type>(LookupByKey(key));
   }
 
@@ -290,8 +284,7 @@ class Vector {
   Vector(const Vector &);
   Vector &operator=(const Vector &);
 
-  template <typename K>
-  static int KeyCompare(const void *ap, const void *bp) {
+  template<typename K> static int KeyCompare(const void *ap, const void *bp) {
     const K *key = reinterpret_cast<const K *>(ap);
     const uint8_t *data = reinterpret_cast<const uint8_t *>(bp);
     auto table = IndirectHelper<T>::Read(data, 0);
@@ -302,7 +295,7 @@ class Vector {
   }
 };
 
-template <class U>
+template<class U>
 FLATBUFFERS_CONSTEXPR_CPP11 flatbuffers::span<U> make_span(Vector<U> &vec)
     FLATBUFFERS_NOEXCEPT {
   static_assert(Vector<U>::is_span_observable,
@@ -310,7 +303,7 @@ FLATBUFFERS_CONSTEXPR_CPP11 flatbuffers::span<U> make_span(Vector<U> &vec)
   return span<U>(vec.data(), vec.size());
 }
 
-template <class U>
+template<class U>
 FLATBUFFERS_CONSTEXPR_CPP11 flatbuffers::span<const U> make_span(
     const Vector<U> &vec) FLATBUFFERS_NOEXCEPT {
   static_assert(Vector<U>::is_span_observable,
@@ -318,7 +311,7 @@ FLATBUFFERS_CONSTEXPR_CPP11 flatbuffers::span<const U> make_span(
   return span<const U>(vec.data(), vec.size());
 }
 
-template <class U>
+template<class U>
 FLATBUFFERS_CONSTEXPR_CPP11 flatbuffers::span<uint8_t> make_bytes_span(
     Vector<U> &vec) FLATBUFFERS_NOEXCEPT {
   static_assert(Vector<U>::scalar_tag::value,
@@ -326,7 +319,7 @@ FLATBUFFERS_CONSTEXPR_CPP11 flatbuffers::span<uint8_t> make_bytes_span(
   return span<uint8_t>(vec.Data(), vec.size() * sizeof(U));
 }
 
-template <class U>
+template<class U>
 FLATBUFFERS_CONSTEXPR_CPP11 flatbuffers::span<const uint8_t> make_bytes_span(
     const Vector<U> &vec) FLATBUFFERS_NOEXCEPT {
   static_assert(Vector<U>::scalar_tag::value,
@@ -336,7 +329,7 @@ FLATBUFFERS_CONSTEXPR_CPP11 flatbuffers::span<const uint8_t> make_bytes_span(
 
 // Convenient helper functions to get a span of any vector, regardless
 // of whether it is null or not (the field is not set).
-template <class U>
+template<class U>
 FLATBUFFERS_CONSTEXPR_CPP11 flatbuffers::span<U> make_span(Vector<U> *ptr)
     FLATBUFFERS_NOEXCEPT {
   static_assert(Vector<U>::is_span_observable,
@@ -344,7 +337,7 @@ FLATBUFFERS_CONSTEXPR_CPP11 flatbuffers::span<U> make_span(Vector<U> *ptr)
   return ptr ? make_span(*ptr) : span<U>();
 }
 
-template <class U>
+template<class U>
 FLATBUFFERS_CONSTEXPR_CPP11 flatbuffers::span<const U> make_span(
     const Vector<U> *ptr) FLATBUFFERS_NOEXCEPT {
   static_assert(Vector<U>::is_span_observable,
@@ -373,13 +366,13 @@ class VectorOfAny {
   VectorOfAny &operator=(const VectorOfAny &);
 };
 
-template <typename T, typename U>
+template<typename T, typename U>
 Vector<Offset<T>> *VectorCast(Vector<Offset<U>> *ptr) {
   static_assert(std::is_base_of<T, U>::value, "Unrelated types");
   return reinterpret_cast<Vector<Offset<T>> *>(ptr);
 }
 
-template <typename T, typename U>
+template<typename T, typename U>
 const Vector<Offset<T>> *VectorCast(const Vector<Offset<U>> *ptr) {
   static_assert(std::is_base_of<T, U>::value, "Unrelated types");
   return reinterpret_cast<const Vector<Offset<T>> *>(ptr);
@@ -387,8 +380,7 @@ const Vector<Offset<T>> *VectorCast(const Vector<Offset<U>> *ptr) {
 
 // Convenient helper function to get the length of any vector, regardless
 // of whether it is null or not (the field is not set).
-template <typename T>
-static inline size_t VectorLength(const Vector<T> *v) {
+template<typename T> static inline size_t VectorLength(const Vector<T> *v) {
   return v ? v->size() : 0;
 }
 
