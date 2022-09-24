@@ -27,13 +27,11 @@ namespace flatbuffers {
 
 class Struct FLATBUFFERS_FINAL_CLASS {
  public:
-  template <typename T>
-  T GetField(uoffset_t o) const {
+  template<typename T> T GetField(uoffset_t o) const {
     return ReadScalar<T>(&data_[o]);
   }
 
-  template <typename T>
-  T GetStruct(uoffset_t o) const {
+  template<typename T> T GetStruct(uoffset_t o) const {
     return reinterpret_cast<T>(&data_[o]);
   }
 
