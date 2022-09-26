@@ -24,8 +24,7 @@
 namespace flatbuffers {
 
 // This is used as a helper type for accessing arrays.
-template <typename T, uint16_t length>
-class Array {
+template<typename T, uint16_t length> class Array {
   // Array<T> can carry only POD data types (scalars or structs).
   typedef typename flatbuffers::bool_constant<flatbuffers::is_scalar<T>::value>
       scalar_tag;
@@ -56,8 +55,7 @@ class Array {
   // If this is a Vector of enums, T will be its storage type, not the enum
   // type. This function makes it convenient to retrieve value with enum
   // type E.
-  template <typename E>
-  E GetEnum(uoffset_t i) const {
+  template<typename E> E GetEnum(uoffset_t i) const {
     return static_cast<E>(Get(i));
   }
 
@@ -133,9 +131,7 @@ class Array {
   // Copy data from flatbuffers::span with endian conversion.
   void CopyFromSpanImpl(flatbuffers::false_type,
                         flatbuffers::span<const T, length> src) {
-    for (size_type k = 0; k < length; k++) {
-      Mutate(k, src[k]);
-    }
+    for (size_type k = 0; k < length; k++) { Mutate(k, src[k]); }
   }
 
   // This class is only used to access pre-existing data. Don't ever
@@ -160,8 +156,7 @@ class Array {
 
 // Specialization for Array[struct] with access using Offset<void> pointer.
 // This specialization used by idl_gen_text.cpp.
-template <typename T, uint16_t length>
-class Array<Offset<T>, length> {
+template<typename T, uint16_t length> class Array<Offset<T>, length> {
   static_assert(flatbuffers::is_same<T, void>::value, "unexpected type T");
 
  public:
@@ -184,7 +179,7 @@ class Array<Offset<T>, length> {
   uint8_t data_[1];
 };
 
-template <class U, uint16_t N>
+template<class U, uint16_t N>
 FLATBUFFERS_CONSTEXPR_CPP11 flatbuffers::span<U, N> make_span(Array<U, N> &arr)
     FLATBUFFERS_NOEXCEPT {
   static_assert(
@@ -193,7 +188,7 @@ FLATBUFFERS_CONSTEXPR_CPP11 flatbuffers::span<U, N> make_span(Array<U, N> &arr)
   return span<U, N>(arr.data(), N);
 }
 
-template <class U, uint16_t N>
+template<class U, uint16_t N>
 FLATBUFFERS_CONSTEXPR_CPP11 flatbuffers::span<const U, N> make_span(
     const Array<U, N> &arr) FLATBUFFERS_NOEXCEPT {
   static_assert(
@@ -202,7 +197,7 @@ FLATBUFFERS_CONSTEXPR_CPP11 flatbuffers::span<const U, N> make_span(
   return span<const U, N>(arr.data(), N);
 }
 
-template <class U, uint16_t N>
+template<class U, uint16_t N>
 FLATBUFFERS_CONSTEXPR_CPP11 flatbuffers::span<uint8_t, sizeof(U) * N>
 make_bytes_span(Array<U, N> &arr) FLATBUFFERS_NOEXCEPT {
   static_assert(Array<U, N>::is_span_observable,
@@ -210,7 +205,7 @@ make_bytes_span(Array<U, N> &arr) FLATBUFFERS_NOEXCEPT {
   return span<uint8_t, sizeof(U) * N>(arr.Data(), sizeof(U) * N);
 }
 
-template <class U, uint16_t N>
+template<class U, uint16_t N>
 FLATBUFFERS_CONSTEXPR_CPP11 flatbuffers::span<const uint8_t, sizeof(U) * N>
 make_bytes_span(const Array<U, N> &arr) FLATBUFFERS_NOEXCEPT {
   static_assert(Array<U, N>::is_span_observable,
@@ -221,23 +216,23 @@ make_bytes_span(const Array<U, N> &arr) FLATBUFFERS_NOEXCEPT {
 // Cast a raw T[length] to a raw flatbuffers::Array<T, length>
 // without endian conversion. Use with care.
 // TODO: move these Cast-methods to `internal` namespace.
-template <typename T, uint16_t length>
+template<typename T, uint16_t length>
 Array<T, length> &CastToArray(T (&arr)[length]) {
   return *reinterpret_cast<Array<T, length> *>(arr);
 }
 
-template <typename T, uint16_t length>
+template<typename T, uint16_t length>
 const Array<T, length> &CastToArray(const T (&arr)[length]) {
   return *reinterpret_cast<const Array<T, length> *>(arr);
 }
 
-template <typename E, typename T, uint16_t length>
+template<typename E, typename T, uint16_t length>
 Array<E, length> &CastToArrayOfEnum(T (&arr)[length]) {
   static_assert(sizeof(E) == sizeof(T), "invalid enum type E");
   return *reinterpret_cast<Array<E, length> *>(arr);
 }
 
-template <typename E, typename T, uint16_t length>
+template<typename E, typename T, uint16_t length>
 const Array<E, length> &CastToArrayOfEnum(const T (&arr)[length]) {
   static_assert(sizeof(E) == sizeof(T), "invalid enum type E");
   return *reinterpret_cast<const Array<E, length> *>(arr);
