@@ -29,7 +29,7 @@ fi
 linux_zip="sdk-repo-linux-emulator-$build.zip"
 
 echo Fetching Linux $build
-/google/data/ro/projects/android/fetch_artifact --bid $build --target emulator-linux_x64 "$linux_zip"
+/google/data/ro/projects/android/fetch_artifact --bid $build --target emulator-linux_x64_gfxstream "$linux_zip"
 update_binaries "$linux_zip" "linux-x86_64"
 
 printf "Upgrade emulator to emu-master-dev build $build\n\n" > emulator.commitmsg
