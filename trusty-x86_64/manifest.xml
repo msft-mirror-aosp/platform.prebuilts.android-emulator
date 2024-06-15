@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<manifest>
+  <contactinfo bugurl="go/repo-bug" />
+
+  <remote name="aosp" fetch="https://android.googlesource.com/" review="https://android.googlesource.com/" />
+
+  <default revision="emu-dev" remote="aosp" sync-j="4" />
+
+  <superproject name="platform/superproject" remote="aosp" />
+
+  <project path="external/dtc" name="platform/external/dtc" clone-depth="1" revision="ac5df7479442f81e9a34d1c179f4e6a6728b3673" />
+
+  <project path="external/glib" name="platform/external/bluetooth/glib" clone-depth="1" revision="5935906b3d2dd8bfdfa698577cd2121d647eec17" />
+
+  <project path="external/libpng" name="platform/external/libpng" clone-depth="1" revision="afa9dcf7a31377a635e91bc9b95305b037e8d567" />
+
+  <project path="external/pcre2" name="platform/external/pcre" clone-depth="1" revision="effd827b77122d3f014a46da08a3333f1875194c" />
+
+  <project path="external/pixman" name="platform/external/pixman" clone-depth="1" revision="23c1678ce52ddfce51c068c5a839db1eadd0a5b8" />
+
+  <project path="external/qemu" name="platform/external/qemu" revision="614afdcff1e91f05ce6246992a99e29241bcd6f0" />
+
+  <project path="external/zlib" name="platform/external/zlib" clone-depth="1" revision="a25229d7fdaa2efaac0c01bae20b4790b563cc20" />
+
+  <project path="external/lz4" name="platform/external/lz4" clone-depth="1" revision="f5414b9ea4c746faa2e8392672a9734836169ea9" />
+
+  <project path="external/keycodemapdb" name="trusty/external/qemu-keycodemapdb" revision="cb06b14fbae94a802a4a8b57ce0650e1fa3dc2b8" clone-depth="1" />
+
+  <project path="external/libslirp" name="trusty/external/qemu-libslirp" clone-depth="1" revision="527c0ad35c887a5c514932eb265d92458e1a5433" />
+
+  <project path="external/crosvm" name="platform/external/crosvm" clone-depth="1" revision="b0835a37b7c1f3079eb689f1027986f8da9daf0b" />
+
+  <project path="external/minigbm" name="platform/external/minigbm" revision="24a395410eed3ba31c3a666812c825a6be358efb" clone-depth="1" />
+
+  <project path="external/minijail" name="platform/external/minijail" revision="354c0ca1eed213523c93bd6db7e838769ee967fe" clone-depth="1" />
+
+  <project path="external/virglrenderer" name="platform/external/virglrenderer" revision="85763f1b385af21473bda94c2b0c6bee62545db9" clone-depth="1" />
+
+  <project path="hardware/google/aemu" name="platform/hardware/google/aemu" revision="878886aa9c62f365f51d39b99c5a521a673aade0" />
+
+  <project path="hardware/google/gfxstream" name="platform/hardware/google/gfxstream" revision="98b56cc51db243649a4731ef17961ddf5fb793d1" />
+
+  <project path="external/libdrm" name="platform/external/libdrm" clone-depth="1" revision="abf3e7957aebcf73d021bbb741922cd0528e3f88" />
+
+  <project path="external/libpciaccess" name="platform/external/libpciaccess" clone-depth="1" revision="d353a96614db0fb3cccd91e4d5c7bee95bab3f00" />
+
+  <project path="external/flatbuffers" name="platform/external/flatbuffers" revision="02e8e1342f0446f80a608a468fbc7fbf2bc7b28f" clone-depth="1" />
+
+  <project path="external/angle" name="platform/external/angle" clone-depth="1" revision="c3e03bbd02be3c3daac0d08e62119bc982da8ff9" />
+
+  <project path="external/rust/crates/anyhow" name="platform/external/rust/crates/anyhow" clone-depth="1" revision="0237915febfd0448d55a3217760537d6d48c1106" />
+
+  <project path="external/rust/crates/bitflags" name="platform/external/rust/crates/bitflags" clone-depth="1" revision="c3a00dd9046c4eaacc913b9cd4668a498c4dfc4f" />
+
+  <project path="external/rust/crates/byteorder" name="platform/external/rust/crates/byteorder" clone-depth="1" revision="271b958a71091151572a5e2efa694183510d5b8a" />
+
+  <project path="external/rust/crates/cfg-if" name="platform/external/rust/crates/cfg-if" clone-depth="1" revision="1d522f835e131a7df51186fd4ccc228e3983787d" />
+
+  <project path="external/rust/crates/libc" name="platform/external/rust/crates/libc" clone-depth="1" revision="8153ed8da424f5ec29b88c05b5cf16f7ad556986" />
+
+  <project path="external/rust/crates/log" name="platform/external/rust/crates/log" clone-depth="1" revision="7fe049414096769cc6a5c10995615e6a26eab1b3" />
+
+  <project path="external/rust/crates/memoffset" name="platform/external/rust/crates/memoffset" clone-depth="1" revision="cc0bf4d63d35299736622ad1acff7203d0bbd9b5" />
+
+  <project path="external/rust/crates/nix" name="platform/external/rust/crates/nix" clone-depth="1" revision="cf63a8964a5ce450df29ff7fc85da2bbcd2baa80" />
+
+  <project path="external/rust/crates/once_cell" name="platform/external/rust/crates/once_cell" clone-depth="1" revision="5e33db2a8a97e03eab3254648b622961a2c6b030" />
+
+  <project path="external/rust/crates/pkg-config" name="platform/external/rust/crates/pkg-config" clone-depth="1" revision="4c5b1e6c3bcd9d7ab84f916ff6dd8722d3b68e85" />
+
+  <project path="external/rust/crates/proc-macro2" name="platform/external/rust/crates/proc-macro2" clone-depth="1" revision="e1da9f8b9f6bf7b2340ab802981face64de5846f" />
+
+  <project path="external/rust/crates/quote" name="platform/external/rust/crates/quote" clone-depth="1" revision="a86ee5c4c9b7ac54b7b7d7e61f301692efe24d7c" />
+
+  <project path="external/rust/crates/remain" name="platform/external/rust/crates/remain" clone-depth="1" revision="76db6d80313c15338b8d7c8eec39d536638e9964" />
+
+  <project path="external/rust/crates/syn" name="platform/external/rust/crates/syn" clone-depth="1" revision="bb6e6297e14757ee2ba780a3907207d935017897" />
+
+  <project path="external/rust/crates/thiserror" name="platform/external/rust/crates/thiserror" clone-depth="1" revision="b2bcd3775531e65ebbaa68632603a98b9bd6a0fc" />
+
+  <project path="external/rust/crates/thiserror-impl" name="platform/external/rust/crates/thiserror-impl" clone-depth="1" revision="889fe17a6a327ae031f79ce735f78fdc725d2c82" />
+
+  <project path="external/rust/crates/unicode-ident" name="platform/external/rust/crates/unicode-ident" clone-depth="1" revision="9a94b3fc103df184299288e40ad38aa119bbe6ae" />
+
+  <project path="external/rust/crates/zerocopy" name="platform/external/rust/crates/zerocopy" clone-depth="1" revision="0828b80ba46d28c958c4d4530a1c5a75f38eedb1" />
+
+  <project path="external/rust/crates/zerocopy-derive" name="platform/external/rust/crates/zerocopy-derive" clone-depth="1" revision="ce9f1d65c76d6d5844d673a7defb47708bf28e55" />
+
+  <project path="hardware/generic/goldfish" name="platform/hardware/generic/goldfish" revision="843093b528f63488913949878737a67c449bf7db" />
+
+  <project path="external/abseil-cpp" name="platform/external/abseil-cpp" clone-depth="1" revision="028c65922ad04ef0cd422187c8f6cb8a073aed81" />
+
+  <project path="external/boringssl" name="platform/external/boringssl" revision="3c48865f006f9649dad3fe90d091c5d448136fec" clone-depth="1" />
+
+  <project path="external/cares" name="platform/external/c-ares" clone-depth="1" revision="42cf8dee534419f1826f474d2f5fd67ac94a1706" />
+
+  <project path="external/grpc" name="platform/external/grpc-grpc" clone-depth="1" revision="07e928d34b13f0c761ab9de755349090c200f44c" />
+
+  <project path="external/protobuf" name="platform/external/protobuf" clone-depth="1" revision="50e6e35e05895f9604fb14d1eeec0cb1ac5fce81" />
+
+  <project path="external/tink" name="platform/external/tink" clone-depth="1" revision="ceb9731529a70b0d16284967edaf29c378088cd5" />
+
+  <project path="external/jsoncpp" name="platform/external/jsoncpp" clone-depth="1" revision="b8e5db16b615a849b61756e1eb4cb79e53b123da" />
+
+  <project path="external/libaom" name="platform/external/libaom" clone-depth="1" revision="8298efe1a467070e13ad1b5c22dd51c520998df4" />
+
+  <project path="external/libjpeg-turbo" name="platform/external/libjpeg-turbo" clone-depth="1" revision="146a9978a04b9ba938f15e8436531be4e5f75e76" />
+
+  <project path="external/libvpx" name="platform/external/libvpx" clone-depth="1" revision="96e3364268b1593fd2377881687b587f82971afb" />
+
+  <project path="external/libyuv" name="platform/external/libyuv" clone-depth="1" revision="3e3a01fd5b3a56ab70f56be095dcda7f1bddf067" />
+
+  <project path="external/nasm" name="platform/external/nasm" clone-depth="1" revision="1ec5e06089966c100cf218b666c2a035a2c73687" />
+
+  <project path="external/perfetto" name="platform/external/perfetto" clone-depth="1" revision="cb163f71f586037536feec3d0c5eab9db409dbac" />
+
+  <project path="external/pffft" name="platform/external/pffft" clone-depth="1" revision="b480de2dc40acbd7a3373f5edbe6ab39a3d6b544" />
+
+  <project path="external/rnnoise" name="platform/external/rnnoise" clone-depth="1" revision="b1827abc6d5b6ace82bd9e579dfde47c43b9fdb5" />
+
+  <project path="external/webrtc" name="platform/external/webrtc" clone-depth="1" revision="d7e8fb96c4ac64c18101159a1ac2cf6ed28ac8e8" />
+
+  <project path="external/googletest" name="platform/external/googletest" revision="fc50481c6d6312013473a13e85fe2c63a7cc1786" clone-depth="1" />
+
+  <project path="external/regex-re2" name="platform/external/regex-re2" revision="a9e0f541cda33daa594bc847a265a217d73d438b" clone-depth="1" />
+
+  <project path="build/bazel" name="platform/build/bazel" revision="08cc582d91fa566b44bfc2c34b070c99c34a45cd">
+    <linkfile dest="WORKSPACE" src="toplevel.WORKSPACE" />
+
+    <linkfile dest=".bazelrc" src="toplevel.bazelrc" />
+
+    <linkfile dest=".bazelversion" src="toplevel.bazelversion" />
+</project>
+
+  <project path="build/make" name="platform/build" clone-depth="1" revision="0984226dbac1a947ad34490e0647cf7e5c5e6d14" />
+
+  <project path="external/meson" name="trusty/external/qemu-meson" revision="9c46e9c47c432dbc9fa1ae585d8ed9d56b5ce4e0" />
+
+  <project path="external/pkg-config" name="platform/external/pkg-config" clone-depth="1" revision="1021557b77a600d4ec7ab7f1a84c3c5feb35e8b9" />
+
+  <project path="prebuilts/android-emulator-build/qemu-android-deps" name="platform/prebuilts/android-emulator-build/qemu-android-deps" clone-depth="1" revision="b06aee625002d0738c5576bbf437b9378229bef0" />
+
+  <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" revision="3060cc8f0c64e5476a973072183520996ff68994" clone-depth="1" groups="notdefault,platform-linux,platform-darwin" />
+
+  <project path="tools/buildSrc" name="platform/tools/buildSrc" revision="0ce245f6bc680abb49fc52b8a88f3280ce609a7e" />
+
+  <project path="prebuilts/rust" name="platform/prebuilts/rust" clone-depth="1" revision="eedaacbf7419f413f67e863e906c774fe89091f9" />
+
+  <project path="prebuilts/bazel/linux-x86_64" name="platform/prebuilts/bazel/linux-x86_64" clone-depth="1" groups="notdefault,platform-linux" revision="3960af99befcf75f224e4047d095aeb8f8060736" />
+
+  <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" revision="b6cafaac9b3c09f6cd81634f1cdd44606ae66d28" groups="notdefault,platform-linux" />
+
+  <project path="prebuilts/cmake/linux-x86" name="platform/prebuilts/cmake/linux-x86" clone-depth="1" groups="notdefault,platform-linux" revision="31612ec58d4ad61d3e9b460551cfca9e05106cbe" />
+
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" clone-depth="1" revision="f02f6bb694b9891e0c5de75bf375440ed71ee6f7" groups="notdefault,platform-linux" />
+
+  <project path="prebuilts/python/linux-x86" name="platform/prebuilts/python/linux-x86" clone-depth="1" revision="3665e3a3bd0cd0d93f6247eb596938cea48268be" groups="notdefault,platform-linux" />
+
+  <project path="prebuilts/bazel/windows-x86_64" name="platform/prebuilts/bazel/windows-x86_64" clone-depth="1" groups="notdefault,platform-windows" revision="a82caa1b59736eadb84439994efbec9b72a8d6ff" />
+
+  <project path="prebuilts/clang/host/windows-x86" name="platform/prebuilts/clang/host/windows-x86" clone-depth="1" revision="37c7bd8f14cfdff5e653c78ed03ca329ce730cec" groups="notdefault,platform-windows" />
+
+  <project path="prebuilts/cmake/windows-x86" name="platform/prebuilts/cmake/windows-x86" clone-depth="1" groups="notdefault,platform-windows" revision="050d3148f1f2420653cc69f93fb0861d68874803" />
+
+  <project path="prebuilts/python/windows-x86" name="platform/prebuilts/python/windows-x86" clone-depth="1" revision="7119932cd3cea23f16db62e683b69c23e415ff09" groups="notdefault,platform-windows" />
+
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" revision="c3bfbc0e5f846396bead4dbc6cb8b9057dea5efc" clone-depth="1" groups="notdefault,platform-windows" />
+
+  <project path="prebuilts/bazel/darwin-x86_64" name="platform/prebuilts/bazel/darwin-x86_64" clone-depth="1" groups="notdefault,platform-darwin" revision="9a8a7f7f8fe4ae72111ab2f5bee7070020571d80" />
+
+  <project path="prebuilts/clang/host/darwin-x86" name="platform/prebuilts/clang/host/darwin-x86" clone-depth="1" revision="9674af67bbf9917bb61992af5083e69312bf7cc6" groups="notdefault,platform-darwin" />
+
+  <project path="prebuilts/cmake/darwin-x86" name="platform/prebuilts/cmake/darwin-x86" clone-depth="1" groups="notdefault,platform-darwin" revision="f8a4461c7c527cc4b208e3ca475d4e9d128ef862" />
+
+  <project path="prebuilts/python/darwin-x86" name="platform/prebuilts/python/darwin-x86" clone-depth="1" revision="8a7b323c92153acc4390bf71392dec2dbb10f4f5" groups="notdefault,platform-darwin" />
+</manifest>

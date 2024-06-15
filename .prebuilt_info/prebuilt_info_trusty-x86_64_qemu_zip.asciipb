@@ -1,0 +1,15 @@
+drops {
+  android_build_drop {
+    build_id: "11955780"
+    target: "trusty_tee-trusty_x64"
+    source_file: "sdk-repo-trusty_x64-qemu-11955780.zip"
+  }
+  dest_file: "trusty-x86_64/qemu.zip"
+  version: ""
+  version_group: ""
+  git_project: "platform/prebuilts/android-emulator"
+  git_branch: "main"
+  transform: TRANSFORM_UNZIP
+  transform_options {
+  }
+}
