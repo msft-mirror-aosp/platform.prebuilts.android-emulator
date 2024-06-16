@@ -1,0 +1,15 @@
+drops {
+  android_build_drop {
+    build_id: "11955780"
+    target: "trusty_tee-trusty_x64"
+    source_file: "manifest_11955780.xml"
+  }
+  dest_file: "trusty-x86_64/manifest.xml"
+  version: ""
+  version_group: ""
+  git_project: "platform/prebuilts/android-emulator"
+  git_branch: "main"
+  transform: TRANSFORM_NONE
+  transform_options {
+  }
+}
