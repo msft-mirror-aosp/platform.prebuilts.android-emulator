@@ -1,6 +1,6 @@
 #!/bin/bash
 # Find builds here:
-# https://android-build.googleplex.com/builds/branches/aosp-emu-master-dev/grid?
+# https://android-build.googleplex.com/builds/branches/git_emu-main-dev/grid?
 set -e
 
 function update_binaries {
@@ -32,7 +32,7 @@ echo Fetching Linux $build
 /google/data/ro/projects/android/fetch_artifact --bid $build --target emulator-linux_x64_gfxstream "$linux_zip"
 update_binaries "$linux_zip" "linux-x86_64"
 
-printf "Upgrade emulator to emu-master-dev build $build\n\n" > emulator.commitmsg
+printf "Upgrade emulator to emu-main-dev build $build\n\n" > emulator.commitmsg
 
 git commit -s -t emulator.commitmsg
 
