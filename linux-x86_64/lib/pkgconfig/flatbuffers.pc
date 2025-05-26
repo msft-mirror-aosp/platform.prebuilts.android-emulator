@@ -3,7 +3,7 @@ includedir=/buildbot/src/out/distribution/emulator/include
 
 Name: FlatBuffers
 Description: Memory Efficient Serialization Library
-Version: 2.0.7
+Version: 25.1.24
 
 Libs: -L${libdir} -lflatbuffers
 Cflags: -I${includedir}
