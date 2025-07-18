@@ -6,11 +6,11 @@
     "mapping": {
         "device": "flash",
         "executable": {
-            "filename": "/buildbot/src/android/emu-dev/out/qemu-bld/build/release/share/qemu/edk2-arm-code.fd",
+            "filename": "/buildbot/src/googleplex-android/main-emu-next-dev/out/qemu-bld/build/release/share/qemu/edk2-arm-code.fd",
             "format": "raw"
         },
         "nvram-template": {
-            "filename": "/buildbot/src/android/emu-dev/out/qemu-bld/build/release/share/qemu/edk2-arm-vars.fd",
+            "filename": "/buildbot/src/googleplex-android/main-emu-next-dev/out/qemu-bld/build/release/share/qemu/edk2-arm-vars.fd",
             "format": "raw"
         }
     },
