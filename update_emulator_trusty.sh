@@ -1,6 +1,6 @@
 #!/bin/bash
 # Find builds here:
-# https://android-build.googleplex.com/builds/branches/git_emu-main-next-dev/grid?
+# https://android-build.googleplex.com/builds/branches/git_emu-main-next/grid?
 set -e
 
 if [ $# == 1 ]
@@ -24,7 +24,7 @@ mkdir "$trusty_dir"
 mv "$manifest_xml" "$trusty_dir/manifest.xml"
 unzip -d "$trusty_dir" "$trusty_zip"
 
-printf "Upgrade Trusty emulator to emu-main-next-dev build $build\n\n" > emulator.commitmsg
+printf "Upgrade Trusty emulator to emu-main-next build $build\n\n" > emulator.commitmsg
 
 # Restore Android.bp since we deleted the whole directory earlier
 git restore -W "$trusty_dir/Android.bp"
