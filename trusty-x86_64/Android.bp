@@ -20,6 +20,7 @@ package {
 cc_prebuilt_binary {
     name: "trusty_qemu_system_aarch64",
     host_supported: true,
+    device_supported: false,
 
     compile_multilib: "64",
     prefer: true,
